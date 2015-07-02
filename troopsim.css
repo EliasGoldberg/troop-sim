@@ -1,0 +1,14 @@
+body {
+    font-family: Sans-Serif;
+}
+
+.input {
+    background-color:lightgreen;
+    color:darkgreen;
+    border:1px solid darkgreen;
+}
+
+.input input {
+    width:30px;
+    text-align:right;
+}

@@ -3,12 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Troop Simulator</title>
+  <link rel="stylesheet" type="text/css" href="troopsim.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
   <script src="troopsim.js"></script>
+  <style></style>
 </head>
 <body>
   <div ng-controller="troopSimCtrl">
-    {{msg}}
+    <h4>Resource Training Costs</h4>
+    <div ng-repeat="tier in resourceTrainingCosts">
+      <table class="input">
+        <tr ng-repeat="cost in tier.costs">
+          <td>T{{tier.tier}}</td>
+          <td>{{cost.name}} RTC</td>
+          <td><input type="text" ng-model="cost.percent">%</td>
+        </tr>
+      </table>
+      <br/>
+    </div>
   </div>
 </body>
 </html>
