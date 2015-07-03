@@ -2,7 +2,7 @@ body {
     font-family: Sans-Serif;
 }
 
-.input {
+.input{
     background-color:lightgreen;
     color:darkgreen;
     border:1px solid darkgreen;
@@ -11,4 +11,8 @@ body {
 .input input {
     width:30px;
     text-align:right;
+}
+
+.input td {
+    padding-left: 3px;
 }
