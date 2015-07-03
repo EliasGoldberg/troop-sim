@@ -128,15 +128,19 @@ angular.module('troopSim',[])
       }
 
       // convert array to hash
-      return btoa(String.fromCharCode.apply(null, costs));
+      var arrString = String.fromCharCode.apply(null, costs);
+      var hash = btoa(arrString);
+      var compressed = $scope.lzw_encode(hash);
+      return compressed;
     };
 
     $scope.setHash = function(path) {
       // get rid of leading forward slash from url
-      path = path.substring(1);
-
+      var compressed = path.substring(1);
       // convert hash to array
-      var costs = new Uint8Array(atob(path).split("").map(function(c) {
+      var hash = $scope.lzw_decode(compressed);
+      var arrString = atob(hash);
+      var costs = new Uint8Array(arrString.split("").map(function(c) {
         return c.charCodeAt(0);
       }));
       var idx = 0;
