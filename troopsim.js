@@ -1,5 +1,5 @@
 angular.module('troopSim',[])
-.controller('troopSimCtrl', function($scope) {
+.controller('troopSimCtrl', function($scope, $location) {
     $scope.resourceTrainingCosts = [
       { tier: 1,
         costs: [
@@ -29,4 +29,18 @@ angular.module('troopSim',[])
           {name: 'Infantry', percent: 0},
           {name: 'Siege', percent: 0}
       ]}];
+
+    $scope.getResourceTrainingCostsHash = function() {
+      var costs = new Uint8Array(16);
+      for (var i=0;i<$scope.resourceTrainingCosts.length;i++) {
+        for (var j=0;j<$scope.resourceTrainingCosts[i].costs.length;j++) {
+          costs[j+(i*4)] = $scope.resourceTrainingCosts[i].costs[j].percent;
+        }
+      }
+      return btoa(String.fromCharCode.apply(null, costs));
+    };
+
+    $scope.$watch($scope.getResourceTrainingCostsHash, function(newVal) {
+      $location.path(newVal);
+    });
   });
