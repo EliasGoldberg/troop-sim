@@ -42,6 +42,7 @@
           </tr>
         </table>
         <br/>
+
         <h4>Misc Boosts</h4>
         <table class="input">
           <tr ng-repeat="boost in data.miscBoosts">
@@ -52,7 +53,24 @@
         <br/>
       </div>
 
+      <div class="col-md-2">
+        <h4>Villas</h4>
+        <table class="input">
+          <tr ng-repeat="villa in data.villas">
+            <td>Villa {{villa.id}}</td><td><input type="text" ng-model="villa.percent">%</td>
+          </tr>
+        </table>
       </div>
+
+      <div class="col-md-2">
+        <h4>Barracks</h4>
+        <table class="input">
+          <tr ng-repeat="barrack in data.barracks ">
+            <td>Barrack {{barrack.id}}</td><td><input type="text" ng-model="barrack.queue"> queue</td>
+          </tr>
+        </table>
+      </div>
+
     </div>
   </div>
 </body>
