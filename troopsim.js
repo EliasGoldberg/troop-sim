@@ -46,13 +46,19 @@ angular.module('troopSim',[])
         {name: "Research Training Speed (Combat)", percent: 0},
         {name: "Research Training Speed II (Hero)", percent: 0},
         {name: "Research Training Speed III (Restorative)", percent: 0}
+      ],
+      miscBoosts: [
+        {name: "Research Training Cap (Restorative)", percent:0},
+        {name: "Coliseum Training Boost", percent:0},
+        {name: "Boost Item", percent:0}
       ]
     };
 
     $scope.getHash = function() {
       var costs = new Uint8Array(
         $scope.data.rtc.length*4 +
-        $scope.data.trainingBoosts.length);
+        $scope.data.trainingBoosts.length +
+        $scope.data.miscBoosts.length);
 
       // encode rtc
       for (var i=0; i<$scope.data.rtc.length; i++) {
@@ -63,6 +69,12 @@ angular.module('troopSim',[])
       // encode training boosts
       for (var i=0; i<$scope.data.trainingBoosts.length; i++) {
         costs[$scope.data.rtc.length*4 + i] = $scope.data.trainingBoosts[i].percent;
+      }
+
+      // encode misc boosts
+      for (var i=0; i<$scope.data.miscBoosts.length; i++) {
+        var idx = $scope.data.rtc.length*4 + $scope.data.trainingBoosts.length + i;
+        costs[idx] = $scope.data.miscBoosts[i].percent;
       }
 
       // convert array to hash
@@ -86,8 +98,14 @@ angular.module('troopSim',[])
       }
 
       // load training boosts from array
-      for (var i=0; i<$scope.data.trainingBoosts; i++) {
+      for (var i=0; i<$scope.data.trainingBoosts.length; i++) {
         $scope.data.trainingBoosts[i].percent = costs[$scope.data.rtc.length*4 + i];
+      }
+
+      // load misc boosts from array
+      for (var i=0; i<$scope.data.miscBoosts.length; i++) {
+        var idx = $scope.data.rtc.length*4 + $scope.data.trainingBoosts.length + i;
+        $scope.data.miscBoosts[i].percent = costs[idx];
       }
     };
 
@@ -98,6 +116,6 @@ angular.module('troopSim',[])
 
     // watch for the url to change, and update the form data
     $scope.$watch(function() {return $location.path()}, function(newVal) {
-      $scope.getHash(newVal)
+      $scope.setHash(newVal)
     });
   });
