@@ -40,7 +40,23 @@ angular.module('troopSim',[])
       return btoa(String.fromCharCode.apply(null, costs));
     };
 
+    $scope.setResourceTrainingCostsHash = function(path) {
+      path = path.substring(1);
+      var costs = new Uint8Array(atob(path).split("").map(function(c) {
+        return c.charCodeAt(0);
+      }));
+      for (var i=0;i<$scope.resourceTrainingCosts.length;i++) {
+        for (var j=0;j<$scope.resourceTrainingCosts[i].costs.length;j++) {
+          $scope.resourceTrainingCosts[i].costs[j].percent = costs[j+(i*4)];
+        }
+      }
+    };
+
     $scope.$watch($scope.getResourceTrainingCostsHash, function(newVal) {
       $location.path(newVal);
+    });
+
+    $scope.$watch(function() {return $location.path()}, function(newVal) {
+      $scope.setResourceTrainingCostsHash(newVal)
     });
   });
