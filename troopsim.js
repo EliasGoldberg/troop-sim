@@ -111,9 +111,15 @@ angular.module('troopSim',[])
       }).reduce(function(prev, cur, idx, array) {
         return prev + cur;
       });
+      var villaBoosts = $scope.data.villas.map(function(elem,idx,array) {
+        return elem.percent;
+      }).reduce(function(prev,cur,idx,array){
+        return prev + cur;
+      });
       var trainingBoosts = $scope.data.miscBoosts["Coliseum Training Boost"] +
-        $scope.data.miscBoosts["Boost Item"] + boostSum;
+        $scope.data.miscBoosts["Boost Item"] + boostSum + villaBoosts;
       trainingBoosts = 1/(1+trainingBoosts);
+
       return totalTrainingTime * trainingBoosts;
     };
 
@@ -142,11 +148,6 @@ angular.module('troopSim',[])
         costs[idx] = $scope.data.miscBoosts[boost];
         idx++;
       }
-      /*
-       for (var i=0; i<$scope.data.miscBoosts.length; i++,idx++) {
-       costs[idx] = $scope.data.miscBoosts[i].percent;
-       }
-       */
 
       // encode villas
       for (var i=0; i<$scope.data.villas.length; i++,idx++) {
@@ -189,12 +190,6 @@ angular.module('troopSim',[])
       }
 
       // load misc boosts from array
-      /*
-       for (var i=0; i<$scope.data.miscBoosts.length; i++,idx++) {
-       $scope.data.miscBoosts[i].percent = costs[idx];
-       }
-       */
-
       for (var boost in $scope.data.miscBoosts) {
         $scope.data.miscBoosts[boost] = costs[idx];
         idx++;
