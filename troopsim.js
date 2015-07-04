@@ -47,11 +47,11 @@ angular.module('troopSim',[])
         {name: "Research Training Speed II (Hero)", percent: 0},
         {name: "Research Training Speed III (Restorative)", percent: 0}
       ],
-      miscBoosts: [
-        {name: "Research Training Cap (Restorative)", percent:0},
-        {name: "Coliseum Training Boost", percent:0},
-        {name: "Boost Item", percent:0}
-      ],
+      miscBoosts: {
+        "Research Training Cap (Restorative)": 0,
+        "Coliseum Training Boost": 15,
+        "Boost Item": 0
+      },
       villas: [
         {id:1,percent:0},
         {id:2,percent:0},
@@ -90,13 +90,38 @@ angular.module('troopSim',[])
         {id:16,queue:0},
         {id:17,queue:0}
       ],
+      troops: [{
+        tier: 1,
+        units: [
+          {name:"Swordsman",      training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0},
+          {name:"Slingers",       training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0},
+          {name:"Outriders",      training:15, food:50,  wood:0,  ore:38, stone:50, silver:0, power:2, count:0},
+          {name:"Battering Rams", training:20, food:100, wood:50, ore:38, stone:50, silver:0, power:4, count:0},
+          {name:"Spearmen",       training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0},
+          {name:"Hunters",        training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0},
+          {name:"Chariot",        training:15, food:0,   wood:0,  ore:0,  stone:0,  silver:0, power:0, count:0},
+        ]
+      }]
+    };
+
+    $scope.trainingTime = function(unit) {
+      var totalTrainingTime = unit.count * unit.training;
+      var boostSum = $scope.data.trainingBoosts.map(function(elem,idx,array){
+        return elem.percent;
+      }).reduce(function(prev, cur, idx, array) {
+        return prev + cur;
+      });
+      var trainingBoosts = $scope.data.miscBoosts["Coliseum Training Boost"] +
+        $scope.data.miscBoosts["Boost Item"] + boostSum;
+      trainingBoosts = 1/(1+trainingBoosts);
+      return totalTrainingTime * trainingBoosts;
     };
 
     $scope.getHash = function() {
       var costs = new Uint8Array(
         $scope.data.rtc.length*$scope.data.rtc[0].costs.length +
         $scope.data.trainingBoosts.length +
-        $scope.data.miscBoosts.length +
+        Object.keys($scope.data.miscBoosts).length +
         $scope.data.villas.length +
         $scope.data.barracks.length);
       var idx = 0;
@@ -113,9 +138,15 @@ angular.module('troopSim',[])
       }
 
       // encode misc boosts
-      for (var i=0; i<$scope.data.miscBoosts.length; i++,idx++) {
-        costs[idx] = $scope.data.miscBoosts[i].percent;
+      for (var boost in $scope.data.miscBoosts) {
+        costs[idx] = $scope.data.miscBoosts[boost];
+        idx++;
       }
+      /*
+       for (var i=0; i<$scope.data.miscBoosts.length; i++,idx++) {
+       costs[idx] = $scope.data.miscBoosts[i].percent;
+       }
+       */
 
       // encode villas
       for (var i=0; i<$scope.data.villas.length; i++,idx++) {
@@ -158,8 +189,15 @@ angular.module('troopSim',[])
       }
 
       // load misc boosts from array
-      for (var i=0; i<$scope.data.miscBoosts.length; i++,idx++) {
-        $scope.data.miscBoosts[i].percent = costs[idx];
+      /*
+       for (var i=0; i<$scope.data.miscBoosts.length; i++,idx++) {
+       $scope.data.miscBoosts[i].percent = costs[idx];
+       }
+       */
+
+      for (var boost in $scope.data.miscBoosts) {
+        $scope.data.miscBoosts[boost] = costs[idx];
+        idx++;
       }
 
       // load villas from array

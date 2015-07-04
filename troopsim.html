@@ -45,9 +45,9 @@
 
         <h4>Misc Boosts</h4>
         <table class="input">
-          <tr ng-repeat="boost in data.miscBoosts">
-            <td>{{boost.name}}</td>
-            <td><input type="text" ng-model="boost.percent">%</td>
+          <tr ng-repeat="(boost,percent) in data.miscBoosts">
+            <td>{{boost}}</td>
+            <td><input type="text" ng-model="data.miscBoosts[boost]">%</td>
           </tr>
         </table>
         <br/>
@@ -70,7 +70,19 @@
           </tr>
         </table>
       </div>
-
+    </div>
+    <br/>
+    <div class="row" ng-repeat="tier in data.troops">
+      <div class="col-md-12">
+        <table class="input">
+          <thead><tr><th>name</th><th>count</th><th>training</th><th>food</th><th>wood</th><th>ore</th><th>stone</th><th>silver</th><th>power</th></tr></thead>
+          <tr ng-repeat="unit in tier.units">
+            <td>{{unit.name}}</td>
+            <td><input type="text" ng-model="unit.count"></td>
+            <td>{{trainingTime(unit)}}</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </body>
