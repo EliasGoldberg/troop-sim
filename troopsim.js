@@ -1,44 +1,32 @@
 angular.module('troopSim',[])
 .controller('troopSimCtrl', function($scope, $location) {
     $scope.data = {
-      rtc: [
-        {
-          tier: 1,
-          costs: [
-            {name: 'Cavalry', percent: 0},
-            {name: 'Range', percent: 0},
-            {name: 'Infantry', percent: 0},
-            {name: 'Siege', percent: 0}
-          ]
+      rtc: {
+        "T1": {
+          'Cavalry':  0,
+          'Range':    0,
+          'Infantry': 0,
+          'Siege':    0
         },
-        {
-          tier: 2,
-          costs: [
-            {name: 'Cavalry', percent: 0},
-            {name: 'Range', percent: 0},
-            {name: 'Infantry', percent: 0},
-            {name: 'Siege', percent: 0}
-          ]
+        "T2": {
+          'Cavalry':  0,
+          'Range':    0,
+          'Infantry': 0,
+          'Siege':    0
         },
-        {
-          tier: 3,
-          costs: [
-            {name: 'Cavalry', percent: 0},
-            {name: 'Range', percent: 0},
-            {name: 'Infantry', percent: 0},
-            {name: 'Siege', percent: 0}
-          ]
+        "T3": {
+          'Cavalry':  0,
+          'Range':    0,
+          'Infantry': 0,
+          'Siege':    0
         },
-        {
-          tier: 4,
-          costs: [
-            {name: 'Cavalry', percent: 0},
-            {name: 'Range', percent: 0},
-            {name: 'Infantry', percent: 0},
-            {name: 'Siege', percent: 0}
-          ]
+        "T4": {
+          'Cavalry':  0,
+          'Range':    0,
+          'Infantry': 0,
+          'Siege':    0
         }
-      ],
+      },
       trainingBoosts: [
         {name: "Hero Skills Training Boosts I", percent: 0},
         {name: "Hero Skills Training Boosts I", percent: 0},
@@ -90,18 +78,31 @@ angular.module('troopSim',[])
         {id:16,queue:0},
         {id:17,queue:0}
       ],
-      troops: [{
-        tier: 1,
-        units: [
-          {name:"Swordsman",      training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0},
-          {name:"Slingers",       training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0},
-          {name:"Outriders",      training:15, food:50,  wood:0,  ore:38, stone:50, silver:0, power:2, count:0},
-          {name:"Battering Rams", training:20, food:100, wood:50, ore:38, stone:50, silver:0, power:4, count:0},
-          {name:"Spearmen",       training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0},
-          {name:"Hunters",        training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0},
-          {name:"Chariot",        training:15, food:0,   wood:0,  ore:0,  stone:0,  silver:0, power:0, count:0},
-        ]
-      }]
+      troops: [
+        {
+          tier: 1,
+          units: [
+            {name:"Swordsman",      training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0, tier:1, type:"Infantry"},
+            {name:"Slingers",       training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0, tier:1, type:"Range"},
+            {name:"Outriders",      training:15, food:50,  wood:0,  ore:38, stone:50, silver:0, power:2, count:0, tier:1, type:"Cavalry"},
+            {name:"Battering Rams", training:20, food:100, wood:50, ore:38, stone:50, silver:0, power:4, count:0, tier:1, type:"Siege"},
+            {name:"Spearmen",       training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0, tier:1, type:"Infantry"},
+            {name:"Hunters",        training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0, tier:1, type:"Range"},
+            {name:"Chariot",        training:15, food:50,  wood:0,  ore:38, stone:50, silver:0, power:2, count:0, tier:1, type:"Cavalry"},
+          ]
+        },
+        {
+          tier: 2,
+          units: [
+            {name:"Hoplites",         training:30, food:100, wood:100, ore:75, stone:0,   silver:5, power:8,  count:0, tier:2, type:"Infantry"},
+            {name:"Skirmish Archers", training:30, food:100, wood:100, ore:0,  stone:100, silver:5, power:8,  count:0, tier:2, type:"Range"},
+            {name:"Light Cavalry",    training:30, food:100, wood:0,   ore:75, stone:100, silver:5, power:8,  count:0, tier:2, type:"Cavalry"},
+            {name:"Ballista",         training:40, food:150, wood:100, ore:75, stone:100, silver:5, power:16, count:0, tier:2, type:"Siege"},
+            {name:"Peltasts",         training:30, food:100, wood:100, ore:75, stone:0,   silver:5, power:8,  count:0, tier:2, type:"Infantry"},
+            {name:"Rangers",          training:30, food:100, wood:100, ore:0,  stone:0,   silver:5, power:8,  count:0, tier:2, type:"Range"},
+            {name:"Scythed Chariots", training:30, food:100, wood:0,   ore:75, stone:100, silver:5, power:8,  count:0, tier:2, type:"Cavalry"},
+          ]
+        }]
     };
 
     $scope.trainingTime = function(unit) {
@@ -123,9 +124,19 @@ angular.module('troopSim',[])
       return totalTrainingTime * trainingBoosts;
     };
 
+    $scope.getUnitResourceBonus = function(unit) {
+      var bonus = $scope.data.rtc["T" + unit.tier][unit.type];
+      return bonus;
+    };
+
+    $scope.resourceCost = function(resource, unit) {
+      var cost = unit[resource] * unit.count * (1 - $scope.getUnitResourceBonus(unit) / 100);
+      return cost;
+    };
+
     $scope.getHash = function() {
       var costs = new Uint8Array(
-        $scope.data.rtc.length*$scope.data.rtc[0].costs.length +
+        Object.keys($scope.data.rtc).length * Object.keys($scope.data.rtc["T1"]).length +
         $scope.data.trainingBoosts.length +
         Object.keys($scope.data.miscBoosts).length +
         $scope.data.villas.length +

@@ -19,21 +19,27 @@
   <div class="container" ng-controller="troopSimCtrl">
     <div class="row">
 
-      <div class="col-md-3">
+      <!--
+      $scope.data = {
+      rtc: {
+        "T1": {
+          'Cavalry':  0,
+      -->
+      <div class="col-sm-3">
         <h4>Resource Training Costs</h4>
-        <div ng-repeat="tier in data.rtc">
+        <div ng-repeat="(tier,bonuses) in data.rtc">
           <table class="input">
-            <tr ng-repeat="cost in tier.costs">
-              <td>T{{tier.tier}}</td>
-              <td>{{cost.name}} RTC</td>
-              <td><input type="text" ng-model="cost.percent">%</td>
+            <tr ng-repeat="(name,percent) in data.rtc[tier]">
+              <td>{{tier}}</td>
+              <td>{{name}} RTC</td>
+              <td><input type="text" ng-model="data.rtc[tier][name]">%</td>
             </tr>
           </table>
           <br/>
         </div>
       </div>
 
-      <div class="col-md-5">
+      <div class="col-sm-5">
         <h4>Training Boosts</h4>
         <table class="input">
           <tr ng-repeat="boost in data.trainingBoosts">
@@ -53,7 +59,7 @@
         <br/>
       </div>
 
-      <div class="col-md-2">
+      <div class="col-sm-2">
         <h4>Villas</h4>
         <table class="input">
           <tr ng-repeat="villa in data.villas">
@@ -62,7 +68,7 @@
         </table>
       </div>
 
-      <div class="col-md-2">
+      <div class="col-sm-2">
         <h4>Barracks</h4>
         <table class="input">
           <tr ng-repeat="barrack in data.barracks ">
@@ -73,13 +79,20 @@
     </div>
     <br/>
     <div class="row" ng-repeat="tier in data.troops">
-      <div class="col-md-12">
+      <div class="col-sm-12">
+        <h4>Tier {{tier.tier}}</h4>
         <table class="input">
           <thead><tr><th>name</th><th>count</th><th>training</th><th>food</th><th>wood</th><th>ore</th><th>stone</th><th>silver</th><th>power</th></tr></thead>
           <tr ng-repeat="unit in tier.units">
-            <td>{{unit.name}}</td>
-            <td><input type="text" ng-model="unit.count"></td>
-            <td>{{trainingTime(unit)}}</td>
+            <td class="unit-label">{{unit.name}}</td>
+            <td class="unit-resource"><input type="text" ng-model="unit.count"></td>
+            <td class="unit-resource">{{trainingTime(unit)}}</td>
+            <td class="unit-resource">{{resourceCost("food", unit)}}</td>
+            <td class="unit-resource">{{resourceCost("wood", unit)}}</td>
+            <td class="unit-resource">{{resourceCost("ore", unit)}}</td>
+            <td class="unit-resource">{{resourceCost("stone", unit)}}</td>
+            <td class="unit-resource">{{resourceCost("silver", unit)}}</td>
+            <td class="unit-resource">{{resourceCost("power", unit)}}</td>
           </tr>
         </table>
       </div>

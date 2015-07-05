@@ -17,3 +17,11 @@ body {
 .input td {
     padding-left: 3px;
 }
+
+.unit-label {
+    width:150px;
+}
+
+.unit-resource {
+    width:75px;
+}
