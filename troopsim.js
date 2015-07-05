@@ -102,6 +102,30 @@ angular.module('troopSim',[])
             {name:"Rangers",          training:30, food:100, wood:100, ore:0,  stone:0,   silver:5, power:8,  count:0, tier:2, type:"Range"},
             {name:"Scythed Chariots", training:30, food:100, wood:0,   ore:75, stone:100, silver:5, power:8,  count:0, tier:2, type:"Cavalry"},
           ]
+        },
+        {
+          tier: 3,
+          units: [
+            {name:"Armored Pikemen",    training:60, food:150, wood:150, ore:112, stone:0,   silver:10, power:24, count:0, tier:3, type:"Infantry"},
+            {name:"Guardians",          training:60, food:150, wood:150, ore:0,   stone:150, silver:10, power:24, count:0, tier:3, type:"Range"},
+            {name:"Companion Cavalry",  training:60, food:150, wood:0,   ore:112, stone:150, silver:10, power:24, count:0, tier:3, type:"Cavalry"},
+            {name:"Siege Towers",       training:80, food:150, wood:150, ore:112, stone:150, silver:10, power:36, count:0, tier:3, type:"Siege"},
+            {name:"Phalangite",         training:60, food:150, wood:150, ore:112, stone:0,   silver:10, power:24, count:0, tier:3, type:"Infantry"},
+            {name:"Stalkers",           training:60, food:150, wood:150, ore:0,   stone:150, silver:10, power:24, count:0, tier:3, type:"Range"},
+            {name:"Lancers",            training:60, food:150, wood:0,   ore:112, stone:150, silver:10, power:24, count:0, tier:3, type:"Cavalry"},
+          ]
+        },
+        {
+          tier: 4,
+          units: [
+            {name:"Immortals",      training:120, food:1000, wood:1000, ore:750, stone:0,    silver:500, power:36, count:0, tier:4, type:"Infantry"},
+            {name:"Marksmen",       training:120, food:1000, wood:1000, ore:0,   stone:1000, silver:500, power:36, count:0, tier:4, type:"Range"},
+            {name:"War Elephants",  training:120, food:1000, wood:0,    ore:750, stone:1000, silver:500, power:36, count:0, tier:4, type:"Cavalry"},
+            {name:"Onager",         training:160, food:1000, wood:1000, ore:750, stone:1000, silver:500, power:48, count:0, tier:4, type:"Siege"},
+            {name:"Legionnaires",   training:120, food:1000, wood:1000, ore:750, stone:0,    silver:500, power:36, count:0, tier:4, type:"Infantry"},
+            {name:"Dianas",         training:120, food:1000, wood:1000, ore:0,   stone:1000, silver:500, power:36, count:0, tier:4, type:"Range"},
+            {name:"Cataphracts",    training:120, food:1000, wood:0,    ore:750, stone:1000, silver:500, power:36, count:0, tier:4, type:"Cavalry"},
+          ]
         }]
     };
 
