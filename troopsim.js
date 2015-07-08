@@ -158,6 +158,23 @@ angular.module('troopSim',[])
       return cost;
     };
 
+    $scope.tierSums = function(tier) {
+      var sums = $scope.data.troops[tier].reduce(function(prev,cur,idx,array){
+        return {
+          name:"tier "+tier,
+          training: prev.training + cur.training,
+          food: prev.food + cur+food,
+          wood: prev.wood + cur.wood,
+          ore: prev.ore + cur.ore,
+          stone: prev.stone + cur.stone,
+          silver: prev.silver + cur.silver,
+          power: prev.power + cur.power,
+          count: prev.count + cur.count
+        };
+      });
+      return sums;
+    };
+
     $scope.getHash = function() {
       var costs = new Uint8Array(
         Object.keys($scope.data.rtc).length * Object.keys($scope.data.rtc["T1"]).length +
@@ -301,4 +318,32 @@ angular.module('troopSim',[])
       }
       return out.join("");
     }
+  })
+  .directive('troopsum',function($compile) {
+    return {
+      restrict: 'A',
+      scope: {
+        tier:"="
+      },
+      link: function(scope, element, attrs) {
+        scope.$watch('tier',function(newTier) {
+          var sums = {
+            name:"tier "+scope.tier.tier, training:0, food:0, wood:0, ore:0, stone:0, silver:0, power:0, count:0
+          };
+          for (var i=0; i<scope.tier.units.length; i++) {
+            sums.food += scope.$parent.resourceCost("food",scope.tier.units[i]);
+            sums.wood += scope.$parent.resourceCost("food",scope.tier.units[i]);
+            sums.ore += scope.$parent.resourceCost("food",scope.tier.units[i]);
+            sums.stone += scope.$parent.resourceCost("food",scope.tier.units[i]);
+            sums.silver += scope.$parent.resourceCost("food",scope.tier.units[i]);
+            sums.power += scope.$parent.resourceCost("food",scope.tier.units[i]);
+          }
+
+          var inside = angular.element('<td>'+sums.food+'</td>');
+          element.append(inside);
+          $compile(inside)(scope);
+        });
+      }
+    };
   });
+
