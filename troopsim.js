@@ -326,21 +326,32 @@ angular.module('troopSim',[])
         tier:"="
       },
       link: function(scope, element, attrs) {
-        scope.$watch('tier',function(newTier) {
+        var getSums = function(tier) {
           var sums = {
             name:"tier "+scope.tier.tier, training:0, food:0, wood:0, ore:0, stone:0, silver:0, power:0, count:0
           };
           for (var i=0; i<scope.tier.units.length; i++) {
-            sums.food += scope.$parent.resourceCost("food",scope.tier.units[i]);
-            sums.wood += scope.$parent.resourceCost("food",scope.tier.units[i]);
-            sums.ore += scope.$parent.resourceCost("food",scope.tier.units[i]);
-            sums.stone += scope.$parent.resourceCost("food",scope.tier.units[i]);
-            sums.silver += scope.$parent.resourceCost("food",scope.tier.units[i]);
-            sums.power += scope.$parent.resourceCost("food",scope.tier.units[i]);
+            sums.training += scope.$parent.trainingTime(scope.tier.units[i]);
+            sums.food += scope.$parent.resourceCost("food", scope.tier.units[i]);
+            sums.wood += scope.$parent.resourceCost("wood", scope.tier.units[i]);
+            sums.ore += scope.$parent.resourceCost("ore", scope.tier.units[i]);
+            sums.stone += scope.$parent.resourceCost("stone", scope.tier.units[i]);
+            sums.silver += scope.$parent.resourceCost("silver", scope.tier.units[i]);
+            sums.power += scope.$parent.resourceCost("power", scope.tier.units[i]);
+            sums.count += scope.tier.units[i].count * 1; // multiply by one so js doesn't think we're concatenating strings :/
           }
+          return sums;
+        };
 
-          var inside = angular.element('<td>'+sums.food+'</td>');
-          element.append(inside);
+        scope.$watch(function() {
+          return getSums(scope.tier).count;
+        },function(newTier) {
+          var sums = getSums(scope.tier);
+          var inside = angular.element(
+            '<td>Total</td><td>'+sums.count+'</td><td>'+sums.training+'</td>' +
+            '<td>'+sums.food+'</td><td>'+sums.wood+'</td><td>'+sums.ore+'</td>' +
+            '<td>'+sums.stone+'</td><td>'+sums.silver+'</td><td>'+sums.power+'</td>');
+          element.html(inside);
           $compile(inside)(scope);
         });
       }
