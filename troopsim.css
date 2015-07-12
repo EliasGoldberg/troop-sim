@@ -25,3 +25,7 @@ body {
 .unit-resource {
     width:75px;
 }
+
+.total {
+    font-weight:bold;
+}

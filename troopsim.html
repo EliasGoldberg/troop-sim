@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- using the non-minimized angularjs script for debugging.  -->
   <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
   <script src='https://javascriptbase64.googlecode.com/files/base64.js'></script>
@@ -20,12 +21,6 @@
   <div class="container" ng-controller="troopSimCtrl">
     <div class="row">
 
-      <!--
-      $scope.data = {
-      rtc: {
-        "T1": {
-          'Cavalry':  0,
-      -->
       <div class="col-sm-3">
         <h4>Resource Training Costs</h4>
         <div ng-repeat="(tier,bonuses) in data.rtc">
@@ -95,7 +90,17 @@
             <td class="unit-resource">{{resourceCost("silver", unit)}}</td>
             <td class="unit-resource">{{resourceCost("power", unit)}}</td>
           </tr>
-          <tr troopsum tier="tier"></tr>
+          <tr class="total">
+            <td>Total</td>
+            <td>{{tierSums[$index].count}}</td>
+            <td>{{tierSums[$index].training}}</td>
+            <td>{{tierSums[$index].food}}</td>
+            <td>{{tierSums[$index].wood}}</td>
+            <td>{{tierSums[$index].ore}}</td>
+            <td>{{tierSums[$index].stone}}</td>
+            <td>{{tierSums[$index].silver}}</td>
+            <td>{{tierSums[$index].power}}</td>
+          </tr>
         </table>
       </div>
     </div>

@@ -129,6 +129,8 @@ angular.module('troopSim',[])
         }]
     };
 
+    $scope.tierSums = [];
+
     $scope.trainingTime = function(unit) {
       var totalTrainingTime = unit.count * unit.training;
       var boostSum = $scope.data.trainingBoosts.map(function(elem,idx,array){
@@ -174,6 +176,30 @@ angular.module('troopSim',[])
       });
       return sums;
     };
+
+    $scope.getSums = function(tier) {
+      var sums = {
+        name:"tier "+tier.tier, training:0, food:0, wood:0, ore:0, stone:0, silver:0, power:0, count:0
+      };
+      for (var i=0; i<tier.units.length; i++) {
+        sums.training += $scope.trainingTime(tier.units[i]);
+        sums.food += $scope.resourceCost("food", tier.units[i]);
+        sums.wood += $scope.resourceCost("wood", tier.units[i]);
+        sums.ore += $scope.resourceCost("ore", tier.units[i]);
+        sums.stone += $scope.resourceCost("stone", tier.units[i]);
+        sums.silver += $scope.resourceCost("silver", tier.units[i]);
+        sums.power += $scope.resourceCost("power", tier.units[i]);
+        sums.count += tier.units[i].count * 1; // multiply by one so js doesn't think we're concatenating strings :/
+      }
+      return sums;
+    };
+
+    $scope.$watch('data', function() {
+      for(var i=0; i<$scope.data.troops.length; i++) {
+        var tier = $scope.data.troops[i];
+        $scope.tierSums[i] = $scope.getSums(tier);
+      }
+    }, true);
 
     $scope.getHash = function() {
       var costs = new Uint8Array(
@@ -317,44 +343,6 @@ angular.module('troopSim',[])
         oldPhrase = phrase;
       }
       return out.join("");
-    }
-  })
-  .directive('troopsum',function($compile) {
-    return {
-      restrict: 'A',
-      scope: {
-        tier:"="
-      },
-      link: function(scope, element, attrs) {
-        var getSums = function(tier) {
-          var sums = {
-            name:"tier "+scope.tier.tier, training:0, food:0, wood:0, ore:0, stone:0, silver:0, power:0, count:0
-          };
-          for (var i=0; i<scope.tier.units.length; i++) {
-            sums.training += scope.$parent.trainingTime(scope.tier.units[i]);
-            sums.food += scope.$parent.resourceCost("food", scope.tier.units[i]);
-            sums.wood += scope.$parent.resourceCost("wood", scope.tier.units[i]);
-            sums.ore += scope.$parent.resourceCost("ore", scope.tier.units[i]);
-            sums.stone += scope.$parent.resourceCost("stone", scope.tier.units[i]);
-            sums.silver += scope.$parent.resourceCost("silver", scope.tier.units[i]);
-            sums.power += scope.$parent.resourceCost("power", scope.tier.units[i]);
-            sums.count += scope.tier.units[i].count * 1; // multiply by one so js doesn't think we're concatenating strings :/
-          }
-          return sums;
-        };
-
-        scope.$watch(function() {
-          return getSums(scope.tier).count;
-        },function(newTier) {
-          var sums = getSums(scope.tier);
-          var inside = angular.element(
-            '<td>Total</td><td>'+sums.count+'</td><td>'+sums.training+'</td>' +
-            '<td>'+sums.food+'</td><td>'+sums.wood+'</td><td>'+sums.ore+'</td>' +
-            '<td>'+sums.stone+'</td><td>'+sums.silver+'</td><td>'+sums.power+'</td>');
-          element.html(inside);
-          $compile(inside)(scope);
-        });
-      }
     };
   });
 
