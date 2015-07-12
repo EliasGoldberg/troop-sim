@@ -74,6 +74,24 @@
       </div>
     </div>
     <br/>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="output">
+          <thead><tr><th></th><th>count</th><th>training</th><th>food</th><th>wood</th><th>ore</th><th>stone</th><th>silver</th><th>power</th></tr></thead>
+          <tr class="total">
+            <td class="unit-label">Grand Total</td>
+            <td class="unit-resource">{{totalSums.count}}</td>
+            <td class="unit-resource">{{totalSums.training}}</td>
+            <td class="unit-resource">{{totalSums.food}}</td>
+            <td class="unit-resource">{{totalSums.wood}}</td>
+            <td class="unit-resource">{{totalSums.ore}}</td>
+            <td class="unit-resource">{{totalSums.stone}}</td>
+            <td class="unit-resource">{{totalSums.silver}}</td>
+            <td class="unit-resource">{{totalSums.power}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
     <div class="row" ng-repeat="tier in data.troops">
       <div class="col-sm-12">
         <h4>Tier {{tier.tier}}</h4>
