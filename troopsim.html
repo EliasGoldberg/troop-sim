@@ -73,9 +73,54 @@
         </table>
       </div>
     </div>
-    <br/>
     <div class="row">
       <div class="col-sm-12">
+        <h4>KVK Points</h4>
+        <table class="input">
+          <thead><tr><th>Pts/T1</th><th>Pts/T1 strat</th><th>Pts/T2</th><th>Pts/T2 strat</th><th>Pts/T3</th><th>Pts/T3 strat</th><th>Pts/T4</th><th>Pts/T4 strat</th><th>Total</th></tr></thead>
+          <tr>
+            <td ng-repeat="points in data.KVKpoints" class="unit-resource">
+              <input type="text" ng-model="$parent.data.KVKpoints[$index].points">
+            </td>
+            <td class="unit-resource">{{pointsTotal(data.KVKpoints)}}</td>
+          </tr>
+        </table>
+        <br />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Solo Points</h4>
+        <table class="input">
+          <thead><tr><th>Pts/T1</th><th>Pts/T1 strat</th><th>Pts/T2</th><th>Pts/T2 strat</th><th>Pts/T3</th><th>Pts/T3 strat</th><th>Pts/T4</th><th>Pts/T4 strat</th><th>Total</th></tr></thead>
+          <tr>
+            <td ng-repeat="points in data.solopoints" class="unit-resource">
+              <input type="text" ng-model="$parent.data.solopoints[$index].points">
+            </td>
+            <td class="unit-resource">{{pointsTotal(data.solopoints)}}</td>
+          </tr>
+        </table>
+        <br />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Inferno Points</h4>
+        <table class="input">
+          <thead><tr><th>Pts/T1</th><th>Pts/T1 strat</th><th>Pts/T2</th><th>Pts/T2 strat</th><th>Pts/T3</th><th>Pts/T3 strat</th><th>Pts/T4</th><th>Pts/T4 strat</th><th>Total</th></tr></thead>
+          <tr>
+            <td ng-repeat="points in data.infernopoints" class="unit-resource">
+              <input type="text" ng-model="$parent.data.infernopoints[$index].points">
+            </td>
+            <td class="unit-resource">{{pointsTotal(data.infernopoints)}}</td>
+          </tr>
+        </table>
+        <br />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+
         <table class="output">
           <thead><tr><th></th><th>count</th><th>training</th><th>food</th><th>wood</th><th>ore</th><th>stone</th><th>silver</th><th>power</th></tr></thead>
           <tr class="total">

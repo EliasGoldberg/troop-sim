@@ -37,7 +37,7 @@ angular.module('troopSim',[])
       ],
       miscBoosts: {
         "Research Training Cap (Restorative)": 0,
-        "Coliseum Training Boost": 15,
+        "Coliseum Training Boost": 0,
         "Boost Item": 0
       },
       villas: [
@@ -82,55 +82,99 @@ angular.module('troopSim',[])
         {
           tier: 1,
           units: [
-            {name:"Swordsman",      training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0, tier:1, type:"Infantry"},
-            {name:"Slingers",       training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0, tier:1, type:"Range"},
-            {name:"Outriders",      training:15, food:50,  wood:0,  ore:38, stone:50, silver:0, power:2, count:0, tier:1, type:"Cavalry"},
-            {name:"Battering Rams", training:20, food:100, wood:50, ore:38, stone:50, silver:0, power:4, count:0, tier:1, type:"Siege"},
-            {name:"Spearmen",       training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0, tier:1, type:"Infantry"},
-            {name:"Hunters",        training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0, tier:1, type:"Range"},
-            {name:"Chariot",        training:15, food:50,  wood:0,  ore:38, stone:50, silver:0, power:2, count:0, tier:1, type:"Cavalry"},
+            {name:"Swordsman",      training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0, tier:1, type:"Infantry", strat: false },
+            {name:"Slingers",       training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0, tier:1, type:"Range",    strat: false },
+            {name:"Outriders",      training:15, food:50,  wood:0,  ore:38, stone:50, silver:0, power:2, count:0, tier:1, type:"Cavalry",  strat: false },
+            {name:"Battering Rams", training:20, food:100, wood:50, ore:38, stone:50, silver:0, power:4, count:0, tier:1, type:"Siege",    strat: false },
+            {name:"Spearmen",       training:15, food:50,  wood:50, ore:38, stone:0,  silver:0, power:2, count:0, tier:1, type:"Infantry", strat: true },
+            {name:"Hunters",        training:15, food:50,  wood:50, ore:0,  stone:50, silver:0, power:2, count:0, tier:1, type:"Range",    strat: true },
+            {name:"Chariot",        training:15, food:50,  wood:0,  ore:38, stone:50, silver:0, power:2, count:0, tier:1, type:"Cavalry",  strat: true },
           ]
         },
         {
           tier: 2,
           units: [
-            {name:"Hoplites",         training:30, food:100, wood:100, ore:75, stone:0,   silver:5, power:8,  count:0, tier:2, type:"Infantry"},
-            {name:"Skirmish Archers", training:30, food:100, wood:100, ore:0,  stone:100, silver:5, power:8,  count:0, tier:2, type:"Range"},
-            {name:"Light Cavalry",    training:30, food:100, wood:0,   ore:75, stone:100, silver:5, power:8,  count:0, tier:2, type:"Cavalry"},
-            {name:"Ballista",         training:40, food:150, wood:100, ore:75, stone:100, silver:5, power:16, count:0, tier:2, type:"Siege"},
-            {name:"Peltasts",         training:30, food:100, wood:100, ore:75, stone:0,   silver:5, power:8,  count:0, tier:2, type:"Infantry"},
-            {name:"Rangers",          training:30, food:100, wood:100, ore:0,  stone:0,   silver:5, power:8,  count:0, tier:2, type:"Range"},
-            {name:"Scythed Chariots", training:30, food:100, wood:0,   ore:75, stone:100, silver:5, power:8,  count:0, tier:2, type:"Cavalry"},
+            {name:"Hoplites",         training:30, food:100, wood:100, ore:75, stone:0,   silver:5, power:8,  count:0, tier:2, type:"Infantry", strat: false },
+            {name:"Skirmish Archers", training:30, food:100, wood:100, ore:0,  stone:100, silver:5, power:8,  count:0, tier:2, type:"Range",    strat: false },
+            {name:"Light Cavalry",    training:30, food:100, wood:0,   ore:75, stone:100, silver:5, power:8,  count:0, tier:2, type:"Cavalry",  strat: false },
+            {name:"Ballista",         training:40, food:150, wood:100, ore:75, stone:100, silver:5, power:16, count:0, tier:2, type:"Siege",    strat: false },
+            {name:"Peltasts",         training:30, food:100, wood:100, ore:75, stone:0,   silver:5, power:8,  count:0, tier:2, type:"Infantry", strat: true },
+            {name:"Rangers",          training:30, food:100, wood:100, ore:0,  stone:0,   silver:5, power:8,  count:0, tier:2, type:"Range",    strat: true },
+            {name:"Scythed Chariots", training:30, food:100, wood:0,   ore:75, stone:100, silver:5, power:8,  count:0, tier:2, type:"Cavalry",  strat: true },
           ]
         },
         {
           tier: 3,
           units: [
-            {name:"Armored Pikemen",    training:60, food:150, wood:150, ore:112, stone:0,   silver:10, power:24, count:0, tier:3, type:"Infantry"},
-            {name:"Guardians",          training:60, food:150, wood:150, ore:0,   stone:150, silver:10, power:24, count:0, tier:3, type:"Range"},
-            {name:"Companion Cavalry",  training:60, food:150, wood:0,   ore:112, stone:150, silver:10, power:24, count:0, tier:3, type:"Cavalry"},
-            {name:"Siege Towers",       training:80, food:150, wood:150, ore:112, stone:150, silver:10, power:36, count:0, tier:3, type:"Siege"},
-            {name:"Phalangite",         training:60, food:150, wood:150, ore:112, stone:0,   silver:10, power:24, count:0, tier:3, type:"Infantry"},
-            {name:"Stalkers",           training:60, food:150, wood:150, ore:0,   stone:150, silver:10, power:24, count:0, tier:3, type:"Range"},
-            {name:"Lancers",            training:60, food:150, wood:0,   ore:112, stone:150, silver:10, power:24, count:0, tier:3, type:"Cavalry"},
+            {name:"Armored Pikemen",    training:60, food:150, wood:150, ore:112, stone:0,   silver:10, power:24, count:0, tier:3, type:"Infantry", strat: false },
+            {name:"Guardians",          training:60, food:150, wood:150, ore:0,   stone:150, silver:10, power:24, count:0, tier:3, type:"Range",    strat: false },
+            {name:"Companion Cavalry",  training:60, food:150, wood:0,   ore:112, stone:150, silver:10, power:24, count:0, tier:3, type:"Cavalry",  strat: false },
+            {name:"Siege Towers",       training:80, food:150, wood:150, ore:112, stone:150, silver:10, power:36, count:0, tier:3, type:"Siege",    strat: false },
+            {name:"Phalangite",         training:60, food:150, wood:150, ore:112, stone:0,   silver:10, power:24, count:0, tier:3, type:"Infantry", strat: true},
+            {name:"Stalkers",           training:60, food:150, wood:150, ore:0,   stone:150, silver:10, power:24, count:0, tier:3, type:"Range",    strat: true},
+            {name:"Lancers",            training:60, food:150, wood:0,   ore:112, stone:150, silver:10, power:24, count:0, tier:3, type:"Cavalry",  strat: true},
           ]
         },
         {
           tier: 4,
           units: [
-            {name:"Immortals",      training:120, food:1000, wood:1000, ore:750, stone:0,    silver:500, power:36, count:0, tier:4, type:"Infantry"},
-            {name:"Marksmen",       training:120, food:1000, wood:1000, ore:0,   stone:1000, silver:500, power:36, count:0, tier:4, type:"Range"},
-            {name:"War Elephants",  training:120, food:1000, wood:0,    ore:750, stone:1000, silver:500, power:36, count:0, tier:4, type:"Cavalry"},
-            {name:"Onager",         training:160, food:1000, wood:1000, ore:750, stone:1000, silver:500, power:48, count:0, tier:4, type:"Siege"},
-            {name:"Legionnaires",   training:120, food:1000, wood:1000, ore:750, stone:0,    silver:500, power:36, count:0, tier:4, type:"Infantry"},
-            {name:"Dianas",         training:120, food:1000, wood:1000, ore:0,   stone:1000, silver:500, power:36, count:0, tier:4, type:"Range"},
-            {name:"Cataphracts",    training:120, food:1000, wood:0,    ore:750, stone:1000, silver:500, power:36, count:0, tier:4, type:"Cavalry"},
+            {name:"Immortals",      training:120, food:1000, wood:1000, ore:750, stone:0,    silver:500, power:36, count:0, tier:4, type:"Infantry", strat: false},
+            {name:"Marksmen",       training:120, food:1000, wood:1000, ore:0,   stone:1000, silver:500, power:36, count:0, tier:4, type:"Range",    strat: false},
+            {name:"War Elephants",  training:120, food:1000, wood:0,    ore:750, stone:1000, silver:500, power:36, count:0, tier:4, type:"Cavalry",  strat: false},
+            {name:"Onager",         training:160, food:1000, wood:1000, ore:750, stone:1000, silver:500, power:48, count:0, tier:4, type:"Siege",    strat: false},
+            {name:"Legionnaires",   training:120, food:1000, wood:1000, ore:750, stone:0,    silver:500, power:36, count:0, tier:4, type:"Infantry", strat: true},
+            {name:"Dianas",         training:120, food:1000, wood:1000, ore:0,   stone:1000, silver:500, power:36, count:0, tier:4, type:"Range",    strat: true},
+            {name:"Cataphracts",    training:120, food:1000, wood:0,    ore:750, stone:1000, silver:500, power:36, count:0, tier:4, type:"Cavalry",  strat: true},
           ]
-        }]
+        }
+      ],
+      KVKpoints: [
+        {tier: 1, strat: false, points: 3},
+        {tier: 1, strat: true, points: 3},
+        {tier: 2, strat: false, points: 6},
+        {tier: 2, strat: true, points: 6},
+        {tier: 3, strat: false, points: 15},
+        {tier: 3, strat: true, points: 15},
+        {tier: 4, strat: false, points: 45},
+        {tier: 4, strat: true, points: 45},
+      ],
+      solopoints: [
+        {tier: 1, strat: false, points: 1},
+        {tier: 1, strat: true, points: 1},
+        {tier: 2, strat: false, points: 2},
+        {tier: 2, strat: true, points: 2},
+        {tier: 3, strat: false, points: 5},
+        {tier: 3, strat: true, points: 5},
+        {tier: 4, strat: false, points: 15},
+        {tier: 4, strat: true, points: 15},
+      ],
+      infernopoints: [
+        {tier: 1, strat: false, points: 1},
+        {tier: 1, strat: true, points: 1},
+        {tier: 2, strat: false, points: 2},
+        {tier: 2, strat: true, points: 2},
+        {tier: 3, strat: false, points: 5},
+        {tier: 3, strat: true, points: 5},
+        {tier: 4, strat: false, points: 15},
+        {tier: 4, strat: true, points: 15},
+      ]
     };
 
     $scope.tierSums = [];
     $scope.totalSums = { training:0, food:0, wood:0, ore:0, stone:0, silver:0, power:0, count:0 };
+
+    $scope.pointsTotal = function(points) {
+      var sum = 0;
+      for (var i=0; i<points.length; i++) {
+        var pts = points[i];
+        sum += $scope.data.troops[pts.tier-1].units.map(function (elem, idx, array) {
+            return elem.count * (elem.strat == pts.strat ? 1 : 0);
+          }).reduce(function (prev, cur, idx, array) {
+            return prev + cur;
+          }) * pts.points;
+      }
+      return sum;
+    };
 
     $scope.trainingTime = function(unit) {
       var totalTrainingTime = unit.count * unit.training;
