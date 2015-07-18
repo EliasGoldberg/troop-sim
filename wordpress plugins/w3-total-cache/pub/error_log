@@ -1,0 +1,7 @@
+[22-May-2015 16:43:59 UTC] PHP Warning:  gzinflate(): data error in /home/fnmmvzru/public_html/gowrealtips.co/wp-content/plugins/w3-total-cache/lib/W3/Minify.php on line 1145
+[22-May-2015 16:56:44 UTC] PHP Warning:  gzinflate(): data error in /home/fnmmvzru/public_html/gowrealtips.co/wp-content/plugins/w3-total-cache/lib/W3/Minify.php on line 1145
+[22-May-2015 17:50:18 UTC] PHP Warning:  gzinflate(): data error in /home/fnmmvzru/public_html/gowrealtips.co/wp-content/plugins/w3-total-cache/lib/W3/Minify.php on line 1145
+[25-May-2015 02:52:27 UTC] PHP Fatal error:  Out of memory (allocated 2621440) (tried to allocate 12288 bytes) in /home/fnmmvzru/public_html/gowrealtips.co/wp-includes/wp-db.php on line 890
+[25-May-2015 02:52:27 UTC] PHP Fatal error:  Out of memory (allocated 23330816) (tried to allocate 384 bytes) in /home/fnmmvzru/public_html/gowrealtips.co/wp-content/plugins/w3-total-cache/lib/W3/Plugin/Cdn.php on line 926
+[27-May-2015 01:54:34 UTC] PHP Warning:  gzinflate(): data error in /home/fnmmvzru/public_html/gowrealtips.co/wp-content/plugins/w3-total-cache/lib/W3/Minify.php on line 1145
+[08-Jun-2015 19:26:17 UTC] PHP Warning:  gzinflate(): data error in /home/fnmmvzru/public_html/gowrealtips.co/wp-content/plugins/w3-total-cache/lib/W3/Minify.php on line 1145

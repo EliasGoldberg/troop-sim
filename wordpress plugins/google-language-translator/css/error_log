@@ -1,0 +1,2 @@
+[27-Mar-2015 20:21:47 America/Denver] PHP Fatal error:  Call to undefined function get_option() in /home/gameofwa/public_html/wp-content/plugins/google-language-translator/css/style.php on line 3
+[28-Mar-2015 01:07:14 America/Denver] PHP Fatal error:  Call to undefined function get_option() in /home/gameofwa/public_html/wp-content/plugins/google-language-translator/css/style.php on line 3

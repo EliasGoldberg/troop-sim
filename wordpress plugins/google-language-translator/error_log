@@ -1,0 +1,4 @@
+[27-Mar-2015 20:21:47 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home/gameofwa/public_html/wp-content/plugins/google-language-translator/widget.php on line 2
+[27-Mar-2015 20:21:47 America/Denver] PHP Fatal error:  Call to undefined function plugin_dir_path() in /home/gameofwa/public_html/wp-content/plugins/google-language-translator/google-language-translator.php on line 11
+[28-Mar-2015 01:07:14 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home/gameofwa/public_html/wp-content/plugins/google-language-translator/widget.php on line 2
+[28-Mar-2015 01:07:14 America/Denver] PHP Fatal error:  Call to undefined function plugin_dir_path() in /home/gameofwa/public_html/wp-content/plugins/google-language-translator/google-language-translator.php on line 11

@@ -1,0 +1,1455 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: en\n"
+"POT-Creation-Date: 2014-09-12 09:46+0330\n"
+"PO-Revision-Date: 2014-09-12 09:46+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: .\n"
+
+#: class/setting-tabs.php:26
+msgid "Product Tabs"
+msgstr ""
+
+#: class/setting-tabs.php:54
+msgid "Wishlist Page"
+msgstr ""
+
+#: class/setting-tabs.php:55
+msgid "Page contents: [pw_woocommerce_tabs]"
+msgstr ""
+
+#: class/setting-tabs.php:89
+msgid "Styles and Scripts"
+msgstr ""
+
+#: class/setting-tabs.php:92
+msgid "Light Skin Colour"
+msgstr ""
+
+#: class/setting-tabs.php:93
+msgid "The base colour for Light Skin Colour. Default <code>#f7f7f7</code>."
+msgstr ""
+
+#: class/setting-tabs.php:102
+msgid "Dark Skin Colour"
+msgstr ""
+
+#: class/setting-tabs.php:103
+msgid "The base colour for Dark Skin Colour. Default <code>#414141</code>."
+msgstr ""
+
+#: class/setting-tabs.php:111
+msgid "Button Colour"
+msgstr ""
+
+#: class/setting-tabs.php:112
+msgid "The base colour for Button Colour. Default <code>#a7a7a7</code>."
+msgstr ""
+
+#: class/setting-tabs.php:120
+msgid "Button Hover Colour"
+msgstr ""
+
+#: class/setting-tabs.php:121
+msgid "The base colour for Button Hover Colour. Default <code>#309af7</code>."
+msgstr ""
+
+#: class/setting-tabs.php:129
+msgid "Icon Colour"
+msgstr ""
+
+#: class/setting-tabs.php:130
+msgid "The base colour for Icon Colour. Default <code>#309af7</code>."
+msgstr ""
+
+#: class/setting-tabs.php:138
+msgid "Link Colour"
+msgstr ""
+
+#: class/setting-tabs.php:139
+msgid "The base colour for Link Colour. Default <code>#bbbbbb</code>."
+msgstr ""
+
+#: class/setting-tabs.php:147
+msgid "Link Hover Colour"
+msgstr ""
+
+#: class/setting-tabs.php:148
+msgid "The base colour for Link Hover Colour. Default <code>#309af7</code>."
+msgstr ""
+
+#: class/setting-tabs.php:156
+msgid "Image Hover"
+msgstr ""
+
+#: class/setting-tabs.php:157
+msgid "The base colour for Image Hover. Default <code>#000000</code>."
+msgstr ""
+
+#: class/setting-tabs.php:165
+msgid "Description Colour"
+msgstr ""
+
+#: class/setting-tabs.php:166
+msgid "The base colour for Description Colour. Default <code>#a7a7a7</code>."
+msgstr ""
+
+#: class/setting-tabs.php:174
+msgid "Price Colour"
+msgstr ""
+
+#: class/setting-tabs.php:175
+msgid "The base colour for Price Colour. Default <code>#309af7</code>."
+msgstr ""
+
+#: class/setting-tabs.php:183
+msgid "Border Colour"
+msgstr ""
+
+#: class/setting-tabs.php:184
+msgid "The base colour for Border Colour. Default <code>#636363</code>."
+msgstr ""
+
+#: class/setting-tabs.php:192
+msgid "Featuerd  Colour"
+msgstr ""
+
+#: class/setting-tabs.php:193
+msgid "The base colour for Featuerd  Colour. Default <code>#ffffff</code>."
+msgstr ""
+
+#: class/setting-tabs.php:201
+msgid "Featuerd Backgraund Colour"
+msgstr ""
+
+#: class/setting-tabs.php:202
+msgid ""
+"The base colour for Featuerd Backgraund Colour. Default <code>#309af7</code>."
+msgstr ""
+
+#: class/setting-tabs.php:210
+msgid "Use Default Theme To Show Products"
+msgstr ""
+
+#: class/setting-tabs.php:211
+msgid "check this if you want to use your default theme view for products."
+msgstr ""
+
+#: class/setting-tabs.php:221
+msgid "Captcha Setting"
+msgstr ""
+
+#: class/setting-tabs.php:223
+msgid "Options relating to the Contact Form With Captcha Plugin Plugin."
+msgstr ""
+
+#: class/setting-tabs.php:224
+msgid "Specify your captcha key "
+msgstr ""
+
+#: class/setting-tabs.php:225
+msgid "Get a key from"
+msgstr ""
+
+#: class/setting-tabs.php:226
+msgid "Here"
+msgstr ""
+
+#: class/setting-tabs.php:228
+msgid "Specify your public key"
+msgstr ""
+
+#: class/setting-tabs.php:229
+msgid "Enter Specify your public key"
+msgstr ""
+
+#: class/setting-tabs.php:238
+msgid "Specify your private key"
+msgstr ""
+
+#: class/setting-tabs.php:239
+msgid "Enter Specify your private key"
+msgstr ""
+
+#: class/setting-tabs.php:253
+msgid "Sticky Button"
+msgstr ""
+
+#: class/setting-tabs.php:256
+msgid "Animation"
+msgstr ""
+
+#: class/setting-tabs.php:257
+msgid "Choose animation for product tab element in front-end."
+msgstr ""
+
+#: class/setting-tabs.php:265
+msgid "No Animation"
+msgstr ""
+
+#: class/setting-tabs.php:266
+msgid "slideDown"
+msgstr ""
+
+#: class/setting-tabs.php:267
+msgid "slideUp"
+msgstr ""
+
+#: class/setting-tabs.php:268
+msgid "slideLeft"
+msgstr ""
+
+#: class/setting-tabs.php:269
+msgid "slideRight"
+msgstr ""
+
+#: class/setting-tabs.php:270
+msgid "fadeIn"
+msgstr ""
+
+#: class/setting-tabs.php:275
+msgid "Top margin for Left side (Pixel)"
+msgstr ""
+
+#: class/setting-tabs.php:276
+msgid "Extra Button Left Top"
+msgstr ""
+
+#: class/setting-tabs.php:284
+msgid "Top margin for Right side (Pixel)"
+msgstr ""
+
+#: class/setting-tabs.php:285
+msgid "Extra Button Right Top"
+msgstr ""
+
+#: class/setting-tabs.php:294
+msgid "Default Image"
+msgstr ""
+
+#: class/setting-tabs.php:295
+msgid "Add Default Image"
+msgstr ""
+
+#: class/setting-tabs.php:322
+msgid "Upload/Add image"
+msgstr ""
+
+#: class/setting-tabs.php:323
+msgid "Remove image"
+msgstr ""
+
+#: class/setting-tabs.php:355
+msgid "Choose an image"
+msgstr ""
+
+#: class/setting-tabs.php:357
+msgid "Use image"
+msgstr ""
+
+#: includes/actions.php:22
+msgid "No Product Name"
+msgstr ""
+
+#: includes/actions.php:25
+msgid "No Name"
+msgstr ""
+
+#: includes/actions.php:26
+msgid "No Email"
+msgstr ""
+
+#: includes/actions.php:28
+msgid "No Website"
+msgstr ""
+
+#: includes/actions.php:29
+msgid "No Address"
+msgstr ""
+
+#: includes/actions.php:30
+msgid "No Description"
+msgstr ""
+
+#: includes/actions.php:35
+msgid "Quotation Request from "
+msgstr ""
+
+#: includes/actions.php:36 includes/actions.php:108
+msgid "From: "
+msgstr ""
+
+#: includes/actions.php:49 includes/frontend-ui/template-inquiry.php:13
+msgid "Product Name"
+msgstr ""
+
+#: includes/actions.php:56
+msgid "Link"
+msgstr ""
+
+#: includes/actions.php:63
+msgid "Name"
+msgstr ""
+
+#: includes/actions.php:70
+msgid "Email"
+msgstr ""
+
+#: includes/actions.php:78
+msgid "Website"
+msgstr ""
+
+#: includes/actions.php:86 includes/admin-ui/map_tab.php:46
+#: includes/customefields.php:550
+msgid "Address"
+msgstr ""
+
+#: includes/actions.php:94
+msgid "Description"
+msgstr ""
+
+#: includes/actions.php:109
+msgid "For Product Name : "
+msgstr ""
+
+#: includes/actions.php:110
+msgid "Email: "
+msgstr ""
+
+#: includes/actions.php:111
+msgid "address: "
+msgstr ""
+
+#: includes/actions.php:119
+msgid "Name is required!"
+msgstr ""
+
+#: includes/actions.php:122
+msgid "Enter Correct Email!"
+msgstr ""
+
+#: includes/actions.php:134
+msgid "Thanks for the quote request!"
+msgstr ""
+
+#: includes/actions.php:137
+msgid "Error, Please Try Again!"
+msgstr ""
+
+#: includes/actions.php:141
+msgid "Error, Please Try Again! The Captcha is Wrong!"
+msgstr ""
+
+#: includes/actions.php:233
+msgid "Text"
+msgstr ""
+
+#: includes/actions.php:234
+msgid "Visual"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:34 includes/customefields.php:347
+msgid "Select Query"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:35 includes/customefields.php:348
+msgid "Choose Query"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:38 includes/customefields.php:353
+msgid "Display All Product from Same Brand"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:39 includes/customefields.php:358
+msgid "Display Featured Product from Same Brand"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:40 includes/customefields.php:363
+msgid "Display All Product from Same Category"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:41 includes/customefields.php:368
+msgid "Display Featured Product from Same Category"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:53
+#: includes/admin-ui/product_tab.php:50
+#: includes/admin-ui/related_post_tab.php:51 includes/customefields.php:213
+#: includes/customefields.php:374 includes/customefields.php:600
+msgid "Display Type"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:54
+#: includes/admin-ui/product_tab.php:51
+#: includes/admin-ui/related_post_tab.php:52 includes/customefields.php:214
+#: includes/customefields.php:375 includes/customefields.php:601
+msgid "Choose Display Type"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:57
+#: includes/admin-ui/photo_tab.php:33 includes/admin-ui/product_tab.php:54
+#: includes/admin-ui/related_post_tab.php:55
+#: includes/admin-ui/video_tab.php:31
+msgid "Grid View"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:58
+#: includes/admin-ui/product_tab.php:55 includes/customefields.php:224
+#: includes/customefields.php:385
+msgid "Carousel"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:59
+#: includes/admin-ui/product_tab.php:56 includes/customefields.php:229
+#: includes/customefields.php:390 includes/customefields.php:611
+msgid "List"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:70
+#: includes/admin-ui/photo_tab.php:45 includes/admin-ui/product_tab.php:67
+#: includes/admin-ui/related_post_tab.php:67
+#: includes/admin-ui/video_tab.php:44 includes/customefields.php:235
+#: includes/customefields.php:396 includes/customefields.php:617
+#: includes/customefields.php:759 includes/customefields.php:816
+msgid "Grid Column"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:71 includes/customefields.php:397
+msgid "Choose Number of Column(s) of Grid"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:74
+#: includes/admin-ui/photo_tab.php:49 includes/admin-ui/product_tab.php:71
+#: includes/admin-ui/related_post_tab.php:71
+#: includes/admin-ui/video_tab.php:48 includes/customefields.php:246
+#: includes/customefields.php:407 includes/customefields.php:628
+#: includes/customefields.php:770 includes/customefields.php:827
+msgid "One Column"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:75
+#: includes/admin-ui/photo_tab.php:50 includes/admin-ui/product_tab.php:72
+#: includes/admin-ui/related_post_tab.php:72
+#: includes/admin-ui/video_tab.php:49 includes/customefields.php:251
+#: includes/customefields.php:412 includes/customefields.php:633
+#: includes/customefields.php:775 includes/customefields.php:832
+msgid "Two Columns"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:76
+#: includes/admin-ui/photo_tab.php:51 includes/admin-ui/product_tab.php:73
+#: includes/admin-ui/related_post_tab.php:73 includes/customefields.php:256
+#: includes/customefields.php:417 includes/customefields.php:638
+#: includes/customefields.php:837
+msgid "Three Columns"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:77
+#: includes/admin-ui/photo_tab.php:52 includes/admin-ui/product_tab.php:74
+#: includes/admin-ui/related_post_tab.php:74 includes/customefields.php:261
+#: includes/customefields.php:422 includes/customefields.php:643
+#: includes/customefields.php:842
+msgid "Four Columns"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:94
+#: includes/admin-ui/product_tab.php:91 includes/customefields.php:267
+#: includes/customefields.php:428
+msgid "Skin"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:95
+#: includes/admin-ui/product_tab.php:92 includes/customefields.php:268
+#: includes/customefields.php:429
+msgid "Choose Skin for Grid and Carousel Type"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:98
+#: includes/admin-ui/product_tab.php:95 includes/customefields.php:278
+#: includes/customefields.php:439
+msgid "Light 1"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:99
+#: includes/admin-ui/product_tab.php:96 includes/customefields.php:283
+#: includes/customefields.php:444
+msgid "Light 2"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:100
+#: includes/admin-ui/product_tab.php:97 includes/customefields.php:288
+#: includes/customefields.php:449
+msgid "Dark 1"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:101
+#: includes/admin-ui/product_tab.php:98 includes/customefields.php:293
+#: includes/customefields.php:454
+msgid "Dark 2"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:118
+#: includes/admin-ui/photo_tab.php:69 includes/admin-ui/product_tab.php:115
+#: includes/admin-ui/related_post_tab.php:91 includes/customefields.php:649
+#: includes/customefields.php:848
+msgid "Grid Image Effect"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:119
+#: includes/admin-ui/photo_tab.php:70 includes/admin-ui/product_tab.php:116
+msgid "Choose Gallery Grid Image Effect"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:122
+#: includes/admin-ui/photo_tab.php:73 includes/admin-ui/product_tab.php:119
+#: includes/admin-ui/related_post_tab.php:95 includes/customefields.php:305
+#: includes/customefields.php:466 includes/customefields.php:655
+#: includes/customefields.php:858
+msgid "Zoom In"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:123
+#: includes/admin-ui/photo_tab.php:74 includes/admin-ui/product_tab.php:120
+#: includes/admin-ui/related_post_tab.php:96 includes/customefields.php:309
+#: includes/customefields.php:470 includes/customefields.php:659
+#: includes/customefields.php:862
+msgid "Zoom Out"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:124
+#: includes/admin-ui/photo_tab.php:75 includes/admin-ui/product_tab.php:121
+#: includes/admin-ui/related_post_tab.php:97 includes/customefields.php:313
+#: includes/customefields.php:474 includes/customefields.php:663
+#: includes/customefields.php:866
+msgid "Rotate Right"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:135
+#: includes/admin-ui/photo_tab.php:91 includes/admin-ui/product_tab.php:132
+#: includes/admin-ui/related_post_tab.php:108 includes/customefields.php:669
+#: includes/customefields.php:872
+msgid "Grid Icon Effect"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:136
+#: includes/admin-ui/product_tab.php:133
+#: includes/admin-ui/related_post_tab.php:109 includes/customefields.php:670
+msgid "Choose Grid Icon Effect"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:139
+#: includes/admin-ui/photo_tab.php:95 includes/admin-ui/product_tab.php:136
+#: includes/admin-ui/related_post_tab.php:112 includes/customefields.php:326
+#: includes/customefields.php:487 includes/customefields.php:676
+#: includes/customefields.php:883
+msgid "Dropdown"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:140
+#: includes/admin-ui/photo_tab.php:96 includes/admin-ui/product_tab.php:137
+#: includes/admin-ui/related_post_tab.php:113 includes/customefields.php:331
+#: includes/customefields.php:492 includes/customefields.php:681
+#: includes/customefields.php:888
+msgid "DropUp"
+msgstr ""
+
+#: includes/admin-ui/brands_category_tab.php:141
+#: includes/admin-ui/photo_tab.php:97 includes/admin-ui/product_tab.php:138
+#: includes/admin-ui/related_post_tab.php:114 includes/customefields.php:336
+#: includes/customefields.php:497 includes/customefields.php:686
+#: includes/customefields.php:893
+msgid "Scale"
+msgstr ""
+
+#: includes/admin-ui/download_tab.php:18 includes/admin-ui/editor_tab.php:15
+#: includes/admin-ui/faq_tab.php:16 includes/admin-ui/form_tab.php:17
+#: includes/admin-ui/inquire_form_tab.php:23 includes/admin-ui/map_tab.php:21
+#: includes/admin-ui/photo_tab.php:22 includes/admin-ui/product_tab.php:22
+#: includes/admin-ui/related_post_tab.php:21
+#: includes/admin-ui/video_tab.php:20
+msgid "Advanced Setting"
+msgstr ""
+
+#: includes/admin-ui/download_tab.php:39 includes/customefields.php:1659
+#: includes/embed.php:26
+msgid "File Uploaded"
+msgstr ""
+
+#: includes/admin-ui/download_tab.php:39 includes/admin-ui/download_tab.php:86
+#: includes/customefields.php:1659 includes/customefields.php:1711
+#: includes/embed.php:25 includes/embed.php:136
+msgid "No File Uploaded"
+msgstr ""
+
+#: includes/admin-ui/download_tab.php:41 includes/admin-ui/download_tab.php:88
+#: includes/customefields.php:1661 includes/customefields.php:1713
+msgid "Choose File"
+msgstr ""
+
+#: includes/admin-ui/download_tab.php:42 includes/admin-ui/download_tab.php:90
+#: includes/customefields.php:1661 includes/customefields.php:1714
+msgid "Remove File"
+msgstr ""
+
+#: includes/admin-ui/download_tab.php:48 includes/admin-ui/download_tab.php:50
+#: includes/admin-ui/download_tab.php:96 includes/admin-ui/download_tab.php:98
+#: includes/customefields.php:1667 includes/customefields.php:1720
+msgid "Download Link"
+msgstr ""
+
+#: includes/admin-ui/download_tab.php:48 includes/admin-ui/download_tab.php:96
+#: includes/customefields.php:1673 includes/customefields.php:1726
+msgid "<-OR->"
+msgstr ""
+
+#: includes/admin-ui/download_tab.php:56 includes/admin-ui/download_tab.php:62
+#: includes/admin-ui/download_tab.php:104
+#: includes/admin-ui/download_tab.php:110 includes/customefields.php:1675
+#: includes/customefields.php:1728
+msgid "Link Title"
+msgstr ""
+
+#: includes/admin-ui/download_tab.php:62
+#: includes/admin-ui/download_tab.php:110 includes/customefields.php:1681
+#: includes/customefields.php:1734
+msgid "Download Description"
+msgstr ""
+
+#: includes/admin-ui/editor_tab.php:19
+msgid "Editor :"
+msgstr ""
+
+#: includes/admin-ui/faq_tab.php:36 includes/admin-ui/faq_tab.php:65
+#: includes/customefields.php:1289 includes/customefields.php:1319
+msgid "Question"
+msgstr ""
+
+#: includes/admin-ui/faq_tab.php:44 includes/admin-ui/faq_tab.php:73
+#: includes/customefields.php:1298 includes/customefields.php:1328
+msgid "Answer"
+msgstr ""
+
+#: includes/admin-ui/form_tab.php:21
+msgid ""
+"You can put Your shortcode here and Generate form.(Such as Contact form)"
+msgstr ""
+
+#: includes/admin-ui/form_tab.php:22
+msgid "Contact Form :"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:31
+msgid "INQUIRY FORM FIELDS"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:35
+msgid "\"Name\" Field Don`t Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:39
+msgid "\"Name\" Field Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:48
+msgid "\"Email\" Field Don`t Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:52
+msgid "\"Email\" Field Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:61
+msgid "\"Website\" Field Don`t Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:65
+msgid "\"Website\" Field Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:74
+msgid "\"Address\" Field Don`t Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:78
+msgid "\"Address\" Field Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:87
+msgid "\"Description\" Field Don`t Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:91
+msgid "\"Description\" Field Display in Form"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:107 includes/customefields.php:696
+msgid "Name Field"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:108 includes/customefields.php:697
+msgid "Add Name Field to Form."
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:118 includes/customefields.php:702
+msgid "Email Field"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:119 includes/customefields.php:703
+msgid "Add Email Field to Form."
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:131 includes/customefields.php:708
+msgid "Website Field"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:132
+msgid "Add Website Url Field to Form."
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:144 includes/customefields.php:714
+msgid "Address Field"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:145 includes/customefields.php:715
+msgid "Add Address Field to Form."
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:156 includes/customefields.php:720
+msgid "Description Field"
+msgstr ""
+
+#: includes/admin-ui/inquire_form_tab.php:157 includes/customefields.php:721
+msgid "Add Description Field to Form."
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:29 includes/customefields.php:527
+msgid "Map Type"
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:30 includes/customefields.php:528
+msgid "Choose Map Type"
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:34 includes/customefields.php:534
+msgid "Direct Address"
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:35 includes/customefields.php:539
+msgid "Embed"
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:36 includes/customefields.php:544
+msgid "Location Point"
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:49
+msgid "Enter Location Address."
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:66
+msgid "Latitiude"
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:68
+msgid "Enter Latitude Point."
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:85 includes/customefields.php:570
+msgid "Longtiude"
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:88
+msgid "Enter Longtiude Point."
+msgstr ""
+
+#: includes/admin-ui/map_tab.php:101
+msgid "Embed Map :"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:29 includes/admin-ui/video_tab.php:27
+#: includes/customefields.php:741 includes/customefields.php:798
+msgid "Gallery Type"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:30 includes/admin-ui/video_tab.php:28
+msgid "Choose Gallery Type"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:34 includes/admin-ui/video_tab.php:32
+#: includes/customefields.php:753 includes/customefields.php:810
+msgid "Slider"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:46 includes/admin-ui/product_tab.php:68
+#: includes/admin-ui/related_post_tab.php:68
+#: includes/admin-ui/video_tab.php:45 includes/customefields.php:236
+#: includes/customefields.php:618 includes/customefields.php:760
+#: includes/customefields.php:817
+msgid "Choose Number of Column(s)"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:92
+msgid "Choose Gallery Grid Icon Effect"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:113
+msgid "Slider Height (Pixel)"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:115
+msgid "Enter Photo Slider Height."
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:153 includes/admin-ui/photo_tab.php:178
+#: includes/admin-ui/video_tab.php:103 includes/admin-ui/video_tab.php:139
+msgid "Upload"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:155 includes/admin-ui/photo_tab.php:180
+#: includes/customefields.php:1573 includes/customefields.php:1599
+msgid "Choose Image"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:157 includes/admin-ui/photo_tab.php:182
+#: includes/admin-ui/video_tab.php:107 includes/admin-ui/video_tab.php:143
+#: includes/customefields.php:1445 includes/customefields.php:1480
+#: includes/customefields.php:1574 includes/customefields.php:1601
+msgid "Remove Image"
+msgstr ""
+
+#: includes/admin-ui/photo_tab.php:162 includes/admin-ui/photo_tab.php:187
+#: includes/customefields.php:1579 includes/customefields.php:1606
+msgid "Uploaded Image"
+msgstr ""
+
+#: includes/admin-ui/product_tab.php:25
+msgid "Select Product(s)"
+msgstr ""
+
+#: includes/admin-ui/product_tab.php:26
+msgid "Search for a product&hellip;"
+msgstr ""
+
+#: includes/admin-ui/product_tab.php:42
+msgid "Choose Product"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:3
+msgid "General Setting"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:12
+msgid "Enable Custom Tab?"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:13
+msgid "Enable this option to display the custom tab on the frontend."
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:25
+msgid "Custom Tab Title"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:28
+msgid "Enter your custom tab title."
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:39
+msgid "Text Content"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:40
+msgid "Enter Content"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:47
+msgid "Enable Sticky Button?"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:47
+msgid "Enable/Disable Sticky Button."
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:54
+msgid "Content Width"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:55
+msgid "Enter Sticky Content Width."
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:63
+msgid "Full"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:79
+msgid "Content Height (Pixel)"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:80
+msgid "Enter Sticky Content Height."
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:101
+msgid "Sticky Button Position"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:102
+msgid "Choose Sticky Position"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:106
+msgid "Left Side"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:107
+msgid "Right Side"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:123
+msgid "Content Changed"
+msgstr ""
+
+#: includes/admin-ui/public_fields.php:124
+msgid "If You Change Below Content, Please Check This Features"
+msgstr ""
+
+#: includes/admin-ui/related_post_tab.php:24
+msgid "Related Post"
+msgstr ""
+
+#: includes/admin-ui/related_post_tab.php:25
+msgid "Search for Posts&hellip;"
+msgstr ""
+
+#: includes/admin-ui/related_post_tab.php:43
+msgid "Choose Related Post"
+msgstr ""
+
+#: includes/admin-ui/related_post_tab.php:56
+msgid "List View"
+msgstr ""
+
+#: includes/admin-ui/related_post_tab.php:92 includes/customefields.php:650
+msgid "Choose Grid Image Effect"
+msgstr ""
+
+#: includes/admin-ui/video_tab.php:66
+msgid "Grid/Silder Height (Pixel)"
+msgstr ""
+
+#: includes/admin-ui/video_tab.php:68
+msgid "Enter Video Grid/Slider Height."
+msgstr ""
+
+#: includes/admin-ui/video_tab.php:105 includes/admin-ui/video_tab.php:141
+#: includes/customefields.php:1443 includes/customefields.php:1478
+msgid "Choose Video Thumb"
+msgstr ""
+
+#: includes/admin-ui/video_tab.php:112 includes/admin-ui/video_tab.php:148
+#: includes/customefields.php:1450 includes/customefields.php:1486
+msgid "Upload Image"
+msgstr ""
+
+#: includes/admin-ui/video_tab.php:120 includes/admin-ui/video_tab.php:157
+#: includes/customefields.php:1459 includes/customefields.php:1492
+msgid "Check this if you want enter the embed video Youtube."
+msgstr ""
+
+#: includes/admin-ui/video_tab.php:123 includes/admin-ui/video_tab.php:160
+#: includes/customefields.php:1462 includes/customefields.php:1498
+msgid "Video Url"
+msgstr ""
+
+#: includes/customefields.php:8
+msgid "Product Tabs General Setting"
+msgstr ""
+
+#: includes/customefields.php:16
+msgid "Products :: Display for all Products"
+msgstr ""
+
+#: includes/customefields.php:24
+msgid "Brands & Category :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:32
+msgid "Editor :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:40
+msgid "Faq :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:48
+msgid "Shortcodes :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:56
+msgid "Video Gallery :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:64
+msgid "Photo Gallerty :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:72
+msgid "Map :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:80
+msgid "Inquiry Form :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:88
+msgid "Download :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:96
+msgid "Related Posts :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:104
+msgid "FAQ :: Display for all Product"
+msgstr ""
+
+#: includes/customefields.php:116 includes/customepost.php:50
+msgid "Type"
+msgstr ""
+
+#: includes/customefields.php:117
+msgid "Choose Tab Type"
+msgstr ""
+
+#: includes/customefields.php:124 includes/customepost.php:67
+msgid "Brands & Category"
+msgstr ""
+
+#: includes/customefields.php:129 includes/customefields.php:507
+#: includes/customefields.php:517 includes/customepost.php:67
+msgid "Editor"
+msgstr ""
+
+#: includes/customefields.php:133 includes/customepost.php:67
+msgid "Download"
+msgstr ""
+
+#: includes/customefields.php:137
+msgid "FAQ"
+msgstr ""
+
+#: includes/customefields.php:141 includes/customepost.php:67
+msgid "Inquiry Form"
+msgstr ""
+
+#: includes/customefields.php:145 includes/customepost.php:67
+msgid "Map"
+msgstr ""
+
+#: includes/customefields.php:150 includes/customepost.php:67
+msgid "Photo Gallery"
+msgstr ""
+
+#: includes/customefields.php:154 includes/customepost.php:67
+msgid "Products"
+msgstr ""
+
+#: includes/customefields.php:158 includes/customepost.php:67
+msgid "Related Posts"
+msgstr ""
+
+#: includes/customefields.php:162 includes/customepost.php:67
+msgid "Shortcodes"
+msgstr ""
+
+#: includes/customefields.php:167 includes/customepost.php:67
+msgid "Video Gallery"
+msgstr ""
+
+#: includes/customefields.php:173 includes/customepost.php:51
+msgid "Order"
+msgstr ""
+
+#: includes/customefields.php:174
+msgid "Enter Tab Order."
+msgstr ""
+
+#: includes/customefields.php:174
+msgid "Note:"
+msgstr ""
+
+#: includes/customefields.php:174
+msgid "The woocommerce reserved order 10, 20 and 30"
+msgstr ""
+
+#: includes/customefields.php:179
+msgid "Tab Status"
+msgstr ""
+
+#: includes/customefields.php:180
+msgid "Choose Tab Status,"
+msgstr ""
+
+#: includes/customefields.php:185
+msgid "Enable"
+msgstr ""
+
+#: includes/customefields.php:190
+msgid "Disable"
+msgstr ""
+
+#: includes/customefields.php:197
+msgid "Icon"
+msgstr ""
+
+#: includes/customefields.php:198
+msgid "Choose Icon for Tab or Sticky Button"
+msgstr ""
+
+#: includes/customefields.php:203
+msgid "Use For All"
+msgstr ""
+
+#: includes/customefields.php:204
+msgid ""
+"If Checked,You can Enter Content for This Tab here and the Content Will be "
+"Displayed in All Products Page"
+msgstr ""
+
+#: includes/customefields.php:219 includes/customefields.php:380
+#: includes/customefields.php:606 includes/customefields.php:748
+#: includes/customefields.php:805
+msgid "Grid"
+msgstr ""
+
+#: includes/customefields.php:299 includes/customefields.php:460
+msgid "Image Effect"
+msgstr ""
+
+#: includes/customefields.php:300 includes/customefields.php:461
+msgid "Choose Image Effect"
+msgstr ""
+
+#: includes/customefields.php:319 includes/customefields.php:480
+msgid "Icon Effect"
+msgstr ""
+
+#: includes/customefields.php:320 includes/customefields.php:481
+msgid "Choose Icon Effect"
+msgstr ""
+
+#: includes/customefields.php:518
+msgid "You can enter any shortcodes."
+msgstr ""
+
+#: includes/customefields.php:551
+msgid "Enter Direct Address"
+msgstr ""
+
+#: includes/customefields.php:560
+msgid "Latitude"
+msgstr ""
+
+#: includes/customefields.php:561
+msgid "Enter Latitude Point"
+msgstr ""
+
+#: includes/customefields.php:571
+msgid "Enter Longtiude Point"
+msgstr ""
+
+#: includes/customefields.php:580
+msgid "Embed Map"
+msgstr ""
+
+#: includes/customefields.php:594
+msgid "Choose Posts"
+msgstr ""
+
+#: includes/customefields.php:595
+msgid "Enter Editor Content"
+msgstr ""
+
+#: includes/customefields.php:709
+msgid "Add Website Field to Form."
+msgstr ""
+
+#: includes/customefields.php:730 includes/customefields.php:731
+msgid "Add FAQ"
+msgstr ""
+
+#: includes/customefields.php:742
+msgid "Choose Video Gallery Type"
+msgstr ""
+
+#: includes/customefields.php:781
+msgid "Grid/Slider Height"
+msgstr ""
+
+#: includes/customefields.php:782
+msgid "Enter Video Grid/Slider Height"
+msgstr ""
+
+#: includes/customefields.php:788 includes/customefields.php:789
+msgid "Add Video"
+msgstr ""
+
+#: includes/customefields.php:799
+msgid "Choose Photo Gallery Type"
+msgstr ""
+
+#: includes/customefields.php:849
+msgid "Choose Photo Gallery Grid Image Effect"
+msgstr ""
+
+#: includes/customefields.php:873
+msgid "Choose Photo Gallery Grid Icon Effect"
+msgstr ""
+
+#: includes/customefields.php:899
+msgid "Slider Height"
+msgstr ""
+
+#: includes/customefields.php:900
+msgid "Enter Photo Slider Height"
+msgstr ""
+
+#: includes/customefields.php:909 includes/customefields.php:910
+msgid "Add Photo"
+msgstr ""
+
+#: includes/customefields.php:919 includes/customefields.php:920
+msgid "Add File"
+msgstr ""
+
+#: includes/customefields.php:1224
+msgid "Select Related Posts"
+msgstr ""
+
+#: includes/customepost.php:7 includes/customepost.php:14
+msgid "Product Tab"
+msgstr ""
+
+#: includes/customepost.php:13
+msgid "Woo Tabs Pro"
+msgstr ""
+
+#: includes/customepost.php:15 includes/customepost.php:16
+msgid "Add Woo Tabs Pro"
+msgstr ""
+
+#: includes/customepost.php:17 includes/customepost.php:18
+msgid "Edit Woo Tabs Pro"
+msgstr ""
+
+#: includes/customepost.php:20 includes/customepost.php:21
+msgid "View Woo Tabs Pro"
+msgstr ""
+
+#: includes/customepost.php:22
+msgid "Search Woo Tabs Pro"
+msgstr ""
+
+#: includes/customepost.php:23
+msgid "No Woo Tabs Pro Found"
+msgstr ""
+
+#: includes/customepost.php:24
+msgid "No Woo Tabs Pro Found in Trash"
+msgstr ""
+
+#: includes/customepost.php:25
+msgid "Parent Woo Tabs Pro"
+msgstr ""
+
+#: includes/customepost.php:52
+msgid "Enable for All"
+msgstr ""
+
+#: includes/customepost.php:53
+msgid "Use for All"
+msgstr ""
+
+#: includes/customepost.php:67
+msgid "faq"
+msgstr ""
+
+#: includes/customepost.php:69
+msgid "No Tab Type"
+msgstr ""
+
+#: includes/frontend-ui/template-brands-category.php:118
+#: includes/frontend-ui/template-brands-category.php:197
+#: includes/frontend-ui/template-brands-category.php:240
+#: includes/frontend-ui/template-productslider.php:58
+#: includes/frontend-ui/template-productslider.php:137
+#: includes/frontend-ui/template-productslider.php:180
+msgid "Featured"
+msgstr ""
+
+#: includes/frontend-ui/template-download.php:17
+msgid "DOWNLOAD"
+msgstr ""
+
+#: includes/frontend-ui/template-download.php:23
+msgid "Download File Not available"
+msgstr ""
+
+#: includes/frontend-ui/template-faq.php:16
+msgid "Not available Faq"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:9
+msgid "Product Name :"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:23
+msgid "Name:"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:27
+msgid "Name ..."
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:27
+msgid "Your Name"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:39
+msgid "Email:"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:43
+msgid "Email ..."
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:43
+msgid "Your Email"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:56
+msgid "Website:"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:60
+msgid "Website ..."
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:60
+msgid "Your Website"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:73
+msgid "Address:"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:77
+msgid "Address ..."
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:77
+msgid "Your Address"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:90
+msgid "Description:"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:94
+msgid "Description ..."
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:94
+msgid "Your Deacription"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:107
+msgid "Enter Captcha"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:125
+#: includes/frontend-ui/template-inquiry.php:148
+msgid "Send"
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:138
+msgid "Sending..."
+msgstr ""
+
+#: includes/frontend-ui/template-inquiry.php:139
+msgid "Please Wait..."
+msgstr ""
+
+#: includes/frontend-ui/template-productslider.php:225
+msgid "Product Not Found"
+msgstr ""
+
+#: includes/frontend-ui/template-related_post.php:57
+#: includes/frontend-ui/template-related_post.php:114
+#: includes/functions.php:53
+msgid "Read More"
+msgstr ""
+
+#: includes/frontend-ui/template-related_post.php:122
+msgid "Not available POST"
+msgstr ""
+
+#: includes/frontend-ui/template-videoslider.php:19
+#: includes/frontend-ui/template-videoslider.php:80
+msgid ""
+"To view this video please enable JavaScript, and consider upgrading to a web "
+"browser that"
+msgstr ""
+
+#: includes/frontend-ui/template-videoslider.php:19
+#: includes/frontend-ui/template-videoslider.php:80
+msgid "supports HTML5 video"
+msgstr ""
+
+#: includes/functions.php:36
+msgid "Select options"
+msgstr ""
+
+#: includes/functions.php:40
+msgid "View options"
+msgstr ""
+
+#: includes/functions.php:49
+msgid "Add to cart"
+msgstr ""
+
+#: includes/functions.php:96
+msgid "Sale!"
+msgstr ""
+
+#: main.php:32
+msgid "For use this type of tab you need "
+msgstr ""
+
+#: main.php:32
+msgid "Woocommerce Brands Plugin"
+msgstr ""
+
+#: main.php:33
+msgid "Please Install/Activate Woocommerce Brands Plugin."
+msgstr ""
+
+#: main.php:108
+msgid "Settings"
+msgstr ""
+
+#: main.php:109
+msgid "Docs"
+msgstr ""
