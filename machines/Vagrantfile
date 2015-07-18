@@ -1,0 +1,45 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  
+  # Setup landrush plugin so we can use names instead
+  # of ip addresses for host / VM communications
+  # See https://github.com/phinze/landrush
+  config.landrush.enabled = true
+  config.landrush.tld = 'troop-sim.co'
+  config.vm.network "private_network", type: "dhcp"
+  
+  # Our VM is based on a barebones Centos 6 image with
+  # Java. It is hosted by https://atlas.hashicorp.com/
+  config.vm.box = "EliasGoldberg/centos6"
+  config.vm.define "vimes" do |vimes|
+    vimes.vm.hostname = "vimes.troop-sim.co"  # use this to refer to our VM
+    
+    # gain access to the install scripts on the host machine
+    vimes.vm.provision "file", source: "config", destination: "~"
+
+    # run these shell commands to configure the vm
+    vimes.vm.provision "shell", inline: <<-SHELL
+      # good practice to run this, but a pain in the ass if you're debugging your 
+      # install scripts and constantly destroying and recreating your vm
+      #sudo yum -y update
+      #sudo yum -y update kernel
+
+      # run the apache install script
+      sudo chmod 777 config/apache.sh && config/apache.sh
+
+      # run the mysql install script and the secure script
+      sudo chmod 777 config/mysql.sh && config/mysql.sh
+      sudo yum install -y expect # this lets us run an interactive script automatically
+      sudo chmod 777 config/mysql.ex && config/mysql.ex
+
+      # php one liner install is not worth its own script
+      sudo yum -y install php php-mysql php-gd
+
+      # run the wordpress install script
+      sudo chmod 777 config/wordpress.sh && config/wordpress.sh
+      
+    SHELL
+  end
+end
