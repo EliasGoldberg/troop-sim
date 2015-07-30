@@ -103,7 +103,7 @@
                 <div class="input-group">
                   <div style="width:40px" class="input-group-addon">{{barrack.id}}</div>
                   <input type="text" placeholder="lvl" class="form-control" ng-model="barrack.lvl" />
-                  <div style="width:68px" class="input-group-addon">
+                  <div style="width:64px; text-align:right;" class="input-group-addon">
                     {{barrack.lvl ? barracksQSize[barrack.lvl] : "queue"}}
                   </div>
                 </div>
@@ -112,7 +112,7 @@
           </table>
           <div class="panel-footer">
               <label>Batch Size</label>
-              <span class="pull-right" style="margin-right:8px;">{{batchSize()}}</span>
+              <span class="pull-right" style="margin-right:3px;">{{batchSize()}}</span>
             </div>
           </div>
         </div>

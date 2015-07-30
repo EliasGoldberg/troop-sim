@@ -53,3 +53,7 @@ table.rtc {margin-bottom:0px;}
 .total {
     font-weight:bold;
 }
+
+.input-group {
+    min-width: 100%;
+}

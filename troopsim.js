@@ -155,7 +155,7 @@ angular.module('troopSim',[])
     $scope.batchSize = function() {
       if ($scope.data.barracks.length > 0) {
         return $scope.data.barracks.map(function(elem,idx,array){
-          return elem.lvl && elem.lvl <= 21 ? $scope.barracksQSize[elem.lvl] : 0;
+          return elem.lvl && elem.lvl <= 21 && elem.lvl > 0 ? $scope.barracksQSize[elem.lvl] : 0;
         }).reduce(function(prev,cur,idx,array) {
           return prev + cur;
         });
