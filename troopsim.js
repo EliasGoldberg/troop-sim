@@ -59,25 +59,7 @@ angular.module('troopSim',[])
         {id:16,percent:0},
         {id:17,percent:0}
       ],
-      barracks: [
-        {id:1,queue:0},
-        {id:2,queue:0},
-        {id:3,queue:0},
-        {id:4,queue:0},
-        {id:5,queue:0},
-        {id:6,queue:0},
-        {id:7,queue:0},
-        {id:8,queue:0},
-        {id:9,queue:0},
-        {id:10,queue:0},
-        {id:11,queue:0},
-        {id:12,queue:0},
-        {id:13,queue:0},
-        {id:14,queue:0},
-        {id:15,queue:0},
-        {id:16,queue:0},
-        {id:17,queue:0}
-      ],
+      barracks: [],
       troops: [
         {
           tier: 1,
@@ -159,7 +141,24 @@ angular.module('troopSim',[])
         {tier: 4, strat: true, points: 15},
       ]
     };
+    $scope.addBarracks = function() {
+      var len = $scope.data.barracks.length;
+      if (len < 21) $scope.data.barracks.push({id:len+1,lvl:null});
+    };
 
+
+    $scope.barracksQSize = [0,20,50,100,150,200,250,300,400,500,600,700,800,900,1050,1250,1500,1750,2000,2250,2500,5000];
+    $scope.batchSize = function() {
+      if ($scope.data.barracks.length > 0) {
+        return $scope.data.barracks.map(function(elem,idx,array){
+          return elem.lvl && elem.lvl <= 21 ? $scope.barracksQSize[elem.lvl] : 0;
+        }).reduce(function(prev,cur,idx,array) {
+          return prev + cur;
+        });
+      } else {
+        return 0;
+      }
+    }
     $scope.tierSums = [];
     $scope.totalSums = { training:0, food:0, wood:0, ore:0, stone:0, silver:0, power:0, count:0 };
 

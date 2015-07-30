@@ -76,7 +76,6 @@
         </table>
         </div>
       </div>
-
       <div class="col-sm-2">
         <h4>Villas</h4>
         <table class="input">
@@ -85,17 +84,35 @@
           </tr>
         </table>
       </div>
-
       <div class="col-sm-2">
-        <h4>Barracks</h4>
-        <table class="input">
-          <tr ng-repeat="barrack in data.barracks ">
-            <td>Barrack {{barrack.id}}</td><td><input type="text" ng-model="barrack.queue"> queue</td>
-          </tr>
-        </table>
+        <div class="panel panel-default">
+          <div class="panel-heading clearfix">
+            <strong class="pull-left" style="padding-top:5px;">Barracks</strong>
+            <a class="btn btn-sm btn-default pull-right" ng-click="addBarracks()">
+              <span class="glyphicon glyphicon-plus"></span>
+            </a>
+          </div>
+          <table class="table table-striped table-hover table-condensed">
+            <tr ng-repeat="barrack in data.barracks ">
+              <td>
+                <div class="input-group">
+                  <div style="width:40px" class="input-group-addon">{{barrack.id}}</div>
+                  <input type="text" placeholder="lvl" class="form-control" ng-model="barrack.lvl" />
+                  <div style="width:68px" class="input-group-addon">
+                    {{barrack.lvl ? barracksQSize[barrack.lvl] : "queue"}}
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="panel-footer">
+              <label>Batch Size</label>
+              <span class="pull-right">{{batchSize()}}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
     <div class="row">
       <div class="col-sm-12">
         <h4>KVK Points</h4>
@@ -202,7 +219,6 @@
 <script>
 $(document).ready(function () {
 function toggleChevron(e) {
-  console.log('here');
     $(e.target)
         .prev()
         .find("i.indicator")
