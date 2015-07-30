@@ -146,6 +146,10 @@ angular.module('troopSim',[])
       if (len < 21) $scope.data.barracks.push({id:len+1,lvl:null});
     };
 
+    $scope.removeBarracks = function() {
+      $scope.data.barracks.pop();
+    }
+
 
     $scope.barracksQSize = [0,20,50,100,150,200,250,300,400,500,600,700,800,900,1050,1250,1500,1750,2000,2250,2500,5000];
     $scope.batchSize = function() {
