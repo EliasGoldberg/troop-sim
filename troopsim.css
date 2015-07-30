@@ -15,6 +15,10 @@ table.rtc {margin-bottom:0px;}
 }
 .output {margin-bottom: 20px;}
 
+.queue {margin-bottom: 3px;}
+.barrack .count {width: 26%; padding: 6px 10px;}
+.barrack .boost {width: 32%; padding: 5px;}
+
 .input{
     background-color:lightgreen;
     color:darkgreen;
