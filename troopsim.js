@@ -40,25 +40,7 @@ angular.module('troopSim',[])
         "Coliseum Training Boost": 0,
         "Boost Item": 0
       },
-      villas: [
-        {id:1,percent:0},
-        {id:2,percent:0},
-        {id:3,percent:0},
-        {id:4,percent:0},
-        {id:5,percent:0},
-        {id:6,percent:0},
-        {id:7,percent:0},
-        {id:8,percent:0},
-        {id:9,percent:0},
-        {id:10,percent:0},
-        {id:11,percent:0},
-        {id:12,percent:0},
-        {id:13,percent:0},
-        {id:14,percent:0},
-        {id:15,percent:0},
-        {id:16,percent:0},
-        {id:17,percent:0}
-      ],
+      villas: [],
       barracks: [],
       troops: [
         {
@@ -141,6 +123,30 @@ angular.module('troopSim',[])
         {tier: 4, strat: true, points: 15},
       ]
     };
+
+    $scope.addVilla = function() {
+      var len = $scope.data.villas.length;
+      if (len < 21) $scope.data.villas.push({id:len+1,lvl:null});
+    };
+
+    $scope.removeVilla = function() {
+      $scope.data.villas.pop();
+    };
+
+    $scope.villaBoost = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,25];
+
+    $scope.totalVillaBoost = function() {
+      if ($scope.data.villas.length > 0) {
+        return $scope.data.villas.map(function(elem,idx,array){
+          return elem.lvl && elem.lvl <= 21 && elem.lvl > 0 ? $scope.villaBoost[elem.lvl] : 0;
+        }).reduce(function(prev,cur,idx,array) {
+          return prev + cur;
+        });
+      } else {
+        return 0;
+      }
+    };
+
     $scope.addBarracks = function() {
       var len = $scope.data.barracks.length;
       if (len < 21) $scope.data.barracks.push({id:len+1,lvl:null});
@@ -150,8 +156,8 @@ angular.module('troopSim',[])
       $scope.data.barracks.pop();
     }
 
-
     $scope.barracksQSize = [0,20,50,100,150,200,250,300,400,500,600,700,800,900,1050,1250,1500,1750,2000,2250,2500,5000];
+
     $scope.batchSize = function() {
       if ($scope.data.barracks.length > 0) {
         return $scope.data.barracks.map(function(elem,idx,array){
@@ -186,11 +192,7 @@ angular.module('troopSim',[])
       }).reduce(function(prev, cur, idx, array) {
         return prev + cur;
       });
-      var villaBoosts = $scope.data.villas.map(function(elem,idx,array) {
-        return elem.percent;
-      }).reduce(function(prev,cur,idx,array){
-        return prev + cur;
-      });
+      var villaBoosts = $scope.totalVillaBoost();
       var trainingBoosts = $scope.data.miscBoosts["Coliseum Training Boost"] +
         $scope.data.miscBoosts["Boost Item"] + boostSum + villaBoosts;
       trainingBoosts = 1/(1+trainingBoosts);

@@ -80,14 +80,38 @@
     </div>
     
     <div class="row">
+
       <div class="col-sm-6">
-        <h4>Villas</h4>
-        <table class="input">
-          <tr ng-repeat="villa in data.villas">
-            <td>Villa {{villa.id}}</td><td><input type="text" ng-model="villa.percent">%</td>
-          </tr>
-        </table>
+        <div class="panel panel-default">
+          <div class="panel-heading clearfix">
+            <strong class="pull-left" style="padding-top:1px;">Villas</strong>
+            <div class="btn-group pull-right" role="group">
+              <a class="btn btn-default btn-xs" ng-click="addVilla()">
+                <span class="glyphicon glyphicon-plus"></span>
+              </a>
+              <a class="btn btn-default btn-xs" ng-click="removeVilla()">
+                <span class="glyphicon glyphicon-minus"></span>
+              </a>
+            </div>
+          </div>
+          <div class="panel-body clearfix">
+            <div ng-repeat="villa in data.villas" class="col-sm-6 col-md-4 col-xs-6 queue barrack">
+              <div class="input-group">
+                <div class="input-group-addon count">{{villa.id}}</div>
+                <input type="text" placeholder="lvl" class="form-control" ng-model="villa.lvl" />
+                <div class="input-group-addon boost">
+                  {{villa.lvl ? villaBoost[villa.lvl] : "bonus"}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <label>Total Bonus</label>
+            <span class="pull-right" style="margin-right:3px;">{{totalVillaBoost()}}</span>
+          </div>
+        </div>
       </div>
+
       <div class="col-sm-6">
         <div class="panel panel-default">
           <div class="panel-heading clearfix">
@@ -110,16 +134,15 @@
                     {{barrack.lvl ? barracksQSize[barrack.lvl] : "queue"}}
                   </div>
                 </div>
-              
             </div>
           </div>
           <div class="panel-footer">
-              <label>Batch Size</label>
-              <span class="pull-right" style="margin-right:3px;">{{batchSize()}}</span>
-            </div>
+            <label>Batch Size</label>
+            <span class="pull-right" style="margin-right:3px;">{{batchSize()}}</span>
           </div>
         </div>
       </div>
+    </div>
     
 
 
